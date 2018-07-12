@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="数据库," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aaron&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="使用postgre导出csv文件 使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv;  COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’); mac excel 打开乱码问题 iconv">
+<meta name="keywords" content="数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postgresql 导出">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/postgre导出csv文件/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
+<meta property="og:description" content="使用postgre导出csv文件 使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv;  COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’); mac excel 打开乱码问题 iconv">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T14:23:48.139Z">
+<meta property="og:updated_time" content="2018-07-04T05:38:05.915Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aaron&#39;s Blog">
-<meta name="twitter:description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
+<meta name="twitter:title" content="postgresql 导出">
+<meta name="twitter:description" content="使用postgre导出csv文件 使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv;  COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’); mac excel 打开乱码问题 iconv">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/postgre导出csv文件/"/>
 
 
 
 
 
-  <title> | Aaron's Blog</title>
+  <title>postgresql 导出 | Aaron's Blog</title>
   
 
 
@@ -250,35 +251,170 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/postgre导出csv文件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Aaron.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>Aarons:</p>
-<p>做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。</p>
-
+          <h1 class="post-title" itemprop="name headline">postgresql 导出</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="使用postgre导出csv文件"><a href="#使用postgre导出csv文件" class="headerlink" title="使用postgre导出csv文件"></a>使用postgre导出csv文件</h2><ul>
+<li>使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; </li>
+<li>COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’);</li>
+<li>mac excel 打开乱码问题 iconv -f UTF8 -t GB18030 a.csv &gt;b.csv</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/04/WebScoket/" rel="next" title="rails n + 1">
+                <i class="fa fa-chevron-left"></i> rails n + 1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -311,8 +447,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -392,6 +537,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用postgre导出csv文件"><span class="nav-number">1.</span> <span class="nav-text">使用postgre导出csv文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

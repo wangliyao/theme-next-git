@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="gem,rails," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="git 提交 遇到远程仓库readme 文件与本地不能同步 fatal: refusing to merge unrelated histories  git pull github master –allow-unrelated-histories  git 删除本地remote  git remote rm origin  git remote add origin xxx  git forc">
-<meta name="keywords" content="git">
+<meta name="description" content="微信公众号开发流程1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下： 1）将token、timestamp、nonce三个参数进行字典序排序 2）将三个参数字符串拼接成一个字符串进行s">
+<meta name="keywords" content="gem,rails">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git">
-<meta property="og:url" content="http://yoursite.com/2018/07/04/git/index.html">
+<meta property="og:title" content="wechat 开发">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/wechat接口开发/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="git 提交 遇到远程仓库readme 文件与本地不能同步 fatal: refusing to merge unrelated histories  git pull github master –allow-unrelated-histories  git 删除本地remote  git remote rm origin  git remote add origin xxx  git forc">
+<meta property="og:description" content="微信公众号开发流程1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下： 1）将token、timestamp、nonce三个参数进行字典序排序 2）将三个参数字符串拼接成一个字符串进行s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-04T05:23:28.364Z">
+<meta property="og:updated_time" content="2018-07-04T05:45:54.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git">
-<meta name="twitter:description" content="git 提交 遇到远程仓库readme 文件与本地不能同步 fatal: refusing to merge unrelated histories  git pull github master –allow-unrelated-histories  git 删除本地remote  git remote rm origin  git remote add origin xxx  git forc">
+<meta name="twitter:title" content="wechat 开发">
+<meta name="twitter:description" content="微信公众号开发流程1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下： 1）将token、timestamp、nonce三个参数进行字典序排序 2）将三个参数字符串拼接成一个字符串进行s">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/04/git/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/wechat接口开发/"/>
 
 
 
 
 
-  <title>git | Aaron's Blog</title>
+  <title>wechat 开发 | Aaron's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/wechat接口开发/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git</h1>
+          <h1 class="post-title" itemprop="name headline">wechat 开发</h1>
         
 
         <div class="post-meta">
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git命令/" itemprop="url" rel="index">
-                    <span itemprop="name">git命令</span>
+                  <a href="/categories/gem/" itemprop="url" rel="index">
+                    <span itemprop="name">gem</span>
                   </a>
                 </span>
 
@@ -352,22 +352,30 @@
       
 
       
-        <h3 id="git-提交-遇到远程仓库readme-文件与本地不能同步"><a href="#git-提交-遇到远程仓库readme-文件与本地不能同步" class="headerlink" title="git 提交 遇到远程仓库readme 文件与本地不能同步"></a>git 提交 遇到远程仓库readme 文件与本地不能同步</h3><hr>
-<p>fatal: refusing to merge unrelated histories</p>
-<ul>
-<li>git pull github master –allow-unrelated-histories</li>
-</ul>
-<h3 id="git-删除本地remote"><a href="#git-删除本地remote" class="headerlink" title="git 删除本地remote"></a>git 删除本地remote</h3><hr>
-<ul>
-<li>git remote rm origin </li>
-<li>git remote add origin xxx</li>
-</ul>
-<h3 id="git-force-提交"><a href="#git-force-提交" class="headerlink" title="git force 提交"></a>git force 提交</h3><hr>
-<ul>
-<li>git add file </li>
-<li>git commit –amend</li>
-<li>git push origin master –froce </li>
-</ul>
+        <h2 id="微信公众号开发流程"><a href="#微信公众号开发流程" class="headerlink" title="微信公众号开发流程"></a>微信公众号开发流程</h2><h3 id="1-接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功"><a href="#1-接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功" class="headerlink" title="1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功"></a>1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功</h3><p>开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下：</p>
+<p>1）将token、timestamp、nonce三个参数进行字典序排序</p>
+<p>2）将三个参数字符串拼接成一个字符串进行sha1加密</p>
+<p>3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
+<h2 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h2><pre><code>def auth_wechat
+    if check_signature?(params[:signature], params[:timestamp], params[:nonce])
+      return render text: params[:echostr]
+    end
+  end
+
+  def check_signature?(signature, timestamp, nonce)
+    Digest::SHA1.hexdigest([timestamp, nonce, @@token].sort.join) == signature
+  end
+</code></pre><hr>
+<h3 id="2-获取access-token"><a href="#2-获取access-token" class="headerlink" title="2.获取access_token"></a>2.获取access_token</h3><p>https请求方式: GET</p>
+<p><a href="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET</a></p>
+<p>返回值：{“access_token”:”ACCESS_TOKEN”,”expires_in”:7200}</p>
+<p>参数说明：</p>
+<p>access_token : 凭证</p>
+<p>expires_in : 凭证有效时间</p>
+<h3 id="3-此处只涉及连接问题"><a href="#3-此处只涉及连接问题" class="headerlink" title="3.此处只涉及连接问题"></a>3.此处只涉及连接问题</h3><p> 其他问题可参考微信开发手册</p>
+<h4 id="微信开发gem"><a href="#微信开发gem" class="headerlink" title="微信开发gem"></a>微信开发gem</h4><p><a href="https://github.com/jasl/wx_pay" target="_blank" rel="noopener">微信支付gem:wx_pay</a></p>
+<p><a href="https://github.com/lanrion/weixin_rails_middleware" target="_blank" rel="noopener">微信开发常用gem:weixin_rails_middleware</a>:这个gem运行命令可直接生成相应的基础功能（包括连接微信接口）</p>
+<p><a href="https://github.com/lanrion/weixin_authorize" target="_blank" rel="noopener">微信高级功能api实现gem:weixin_authorize</a></p>
 
       
     </div>
@@ -385,7 +393,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/gem/" rel="tag"># gem</a>
+          
+            <a href="/tags/rails/" rel="tag"># rails</a>
           
         </div>
       
@@ -398,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/04/shadowsock+kcptun/" rel="next" title="梯子加速">
-                <i class="fa fa-chevron-left"></i> 梯子加速
+              <a href="/2018/07/04/一些工具和开发gem/" rel="next" title="开发工具和 gem">
+                <i class="fa fa-chevron-left"></i> 开发工具和 gem
               </a>
             
           </div>
@@ -408,8 +418,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/04/rails N+1 问题/" rel="prev" title="rails n + 1">
-                rails n + 1 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/04/shadowsock+kcptun/" rel="prev" title="梯子加速">
+                梯子加速 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -562,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-提交-遇到远程仓库readme-文件与本地不能同步"><span class="nav-number">1.</span> <span class="nav-text">git 提交 遇到远程仓库readme 文件与本地不能同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-删除本地remote"><span class="nav-number">2.</span> <span class="nav-text">git 删除本地remote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-force-提交"><span class="nav-number">3.</span> <span class="nav-text">git force 提交</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#微信公众号开发流程"><span class="nav-number">1.</span> <span class="nav-text">微信公众号开发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功"><span class="nav-number">1.1.</span> <span class="nav-text">1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码："><span class="nav-number">2.</span> <span class="nav-text">示例代码：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-获取access-token"><span class="nav-number">2.1.</span> <span class="nav-text">2.获取access_token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-此处只涉及连接问题"><span class="nav-number">2.2.</span> <span class="nav-text">3.此处只涉及连接问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#微信开发gem"><span class="nav-number">2.2.1.</span> <span class="nav-text">微信开发gem</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

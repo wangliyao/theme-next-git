@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="算法," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aaron&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="冒泡  12345678a = [3,10,2,1,7]a.each_index do |index|  (a.size - 1 - index).times do |e|    if a[e] &amp;lt; a[e+1]       a[e], a[e+1] = a[e+1], a[e]    end  endend ###">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法入门:冒泡">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/算法入门/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
+<meta property="og:description" content="冒泡  12345678a = [3,10,2,1,7]a.each_index do |index|  (a.size - 1 - index).times do |e|    if a[e] &amp;lt; a[e+1]       a[e], a[e+1] = a[e+1], a[e]    end  endend ###">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T14:23:48.139Z">
+<meta property="og:updated_time" content="2018-07-04T05:34:33.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aaron&#39;s Blog">
-<meta name="twitter:description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
+<meta name="twitter:title" content="算法入门:冒泡">
+<meta name="twitter:description" content="冒泡  12345678a = [3,10,2,1,7]a.each_index do |index|  (a.size - 1 - index).times do |e|    if a[e] &amp;lt; a[e+1]       a[e], a[e+1] = a[e+1], a[e]    end  endend ###">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/算法入门/"/>
 
 
 
 
 
-  <title> | Aaron's Blog</title>
+  <title>算法入门:冒泡 | Aaron's Blog</title>
   
 
 
@@ -250,35 +251,171 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/算法入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Aaron.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>Aarons:</p>
-<p>做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。</p>
-
+          <h1 class="post-title" itemprop="name headline">算法入门:冒泡</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="冒泡"><a href="#冒泡" class="headerlink" title="冒泡"></a>冒泡</h3>  <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">3</span>,<span class="number">10</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">7</span>]</span><br><span class="line">a.each_index <span class="keyword">do</span> <span class="params">|index|</span></span><br><span class="line">  (a.size - <span class="number">1</span> - index).times <span class="keyword">do</span> <span class="params">|e|</span></span><br><span class="line">    <span class="keyword">if</span> a[e] &lt; a[e+<span class="number">1</span>]</span><br><span class="line">       a[e], a[e+<span class="number">1</span>] = a[e+<span class="number">1</span>], a[e]</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>### </p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/04/解决rails 4.2.2 rake错误/" rel="next" title="Rails 4.2.2 遇到的问题">
+                <i class="fa fa-chevron-left"></i> Rails 4.2.2 遇到的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/04/一些工具和开发gem/" rel="prev" title="开发工具和 gem">
+                开发工具和 gem <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -311,8 +448,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -392,6 +538,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡"><span class="nav-number">1.</span> <span class="nav-text">冒泡</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Rails," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aaron&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="##Rails N+1查询及解决方式 Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况 123456789101112131415161718class Post &amp;lt; ApplicationRecord  has_many :commentsendclass Comment &amp;lt; ApplicationRecord  belongs_to :postend&amp;gt">
+<meta name="keywords" content="Rails">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rails n + 1">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/rails N+1 问题/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
+<meta property="og:description" content="##Rails N+1查询及解决方式 Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况 123456789101112131415161718class Post &amp;lt; ApplicationRecord  has_many :commentsendclass Comment &amp;lt; ApplicationRecord  belongs_to :postend&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T14:23:48.139Z">
+<meta property="og:updated_time" content="2018-07-04T05:39:48.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aaron&#39;s Blog">
-<meta name="twitter:description" content="Aarons: 做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。">
+<meta name="twitter:title" content="rails n + 1">
+<meta name="twitter:description" content="##Rails N+1查询及解决方式 Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况 123456789101112131415161718class Post &amp;lt; ApplicationRecord  has_many :commentsendclass Comment &amp;lt; ApplicationRecord  belongs_to :postend&amp;gt">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/rails N+1 问题/"/>
 
 
 
 
 
-  <title> | Aaron's Blog</title>
+  <title>rails n + 1 | Aaron's Blog</title>
   
 
 
@@ -250,35 +251,184 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/rails N+1 问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Aaron.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>Aarons:</p>
-<p>做事成功的要诀就如同钥匙开锁的道理一样，如果你不能准确对号，那麽一定无法打开成功之门。</p>
-
+          <h1 class="post-title" itemprop="name headline">rails n + 1</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Rails/" itemprop="url" rel="index">
+                    <span itemprop="name">Rails</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>##Rails N+1查询及解决方式</p>
+<p>Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Post</span> &lt; ApplicationRecord</span></span><br><span class="line">  has_many <span class="symbol">:comments</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Comment</span> &lt; ApplicationRecord</span></span><br><span class="line">  belongs_to <span class="symbol">:post</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">&gt; Post.count</span><br><span class="line">(<span class="number">0</span>.<span class="number">1</span>ms)  SELECT COUNT(*) FROM <span class="string">"posts"</span></span><br><span class="line">=&gt; <span class="number">4</span></span><br><span class="line"></span><br><span class="line">&gt; Post.all.map&#123;<span class="params">|post|</span> post.comments&#125;</span><br><span class="line">  Post Load (<span class="number">0</span>.<span class="number">3</span>ms)  SELECT <span class="string">"posts"</span>.* FROM <span class="string">"posts"</span></span><br><span class="line">  Comment Load (<span class="number">0</span>.<span class="number">2</span>ms)  SELECT <span class="string">"comments"</span>.* FROM <span class="string">"comments"</span> WHERE <span class="string">"comments"</span>.<span class="string">"post_id"</span> = ?  [[<span class="string">"post_id"</span>, <span class="number">1</span>]]</span><br><span class="line">  Comment Load (<span class="number">0</span>.<span class="number">4</span>ms)  SELECT <span class="string">"comments"</span>.* FROM <span class="string">"comments"</span> WHERE <span class="string">"comments"</span>.<span class="string">"post_id"</span> = ?  [[<span class="string">"post_id"</span>, <span class="number">2</span>]]</span><br><span class="line">  Comment Load (<span class="number">0</span>.<span class="number">6</span>ms)  SELECT <span class="string">"comments"</span>.* FROM <span class="string">"comments"</span> WHERE <span class="string">"comments"</span>.<span class="string">"post_id"</span> = ?  [[<span class="string">"post_id"</span>, <span class="number">3</span>]]</span><br><span class="line">  Comment Load (<span class="number">0</span>.<span class="number">6</span>ms)  SELECT <span class="string">"comments"</span>.* FROM <span class="string">"comments"</span> WHERE <span class="string">"comments"</span>.<span class="string">"post_id"</span> = ?  [[<span class="string">"post_id"</span>, <span class="number">4</span>]]</span><br></pre></td></tr></table></figure>
+<p><code>一共有4个查询结果，但是却查询了5次，这个就出现了N+1查询</code></p>
+<p>##解决方式</p>
+<p>ActiveRecord提供了对module层预加载的功能</p>
+<p>分别为</p>
+<ul>
+<li><code>includes</code></li>
+<li><code>preload</code></li>
+<li><code>eager_load</code></li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Post.includes(<span class="symbol">:comments</span>).map&#123;<span class="params">|post|</span> post.comments&#125;</span><br><span class="line">  Post Load (<span class="number">0</span>.<span class="number">2</span>ms)  SELECT <span class="string">"posts"</span>.* FROM <span class="string">"posts"</span></span><br><span class="line">  Comment Load (<span class="number">0</span>.<span class="number">5</span>ms)  SELECT <span class="string">"comments"</span>.* FROM <span class="string">"comments"</span> WHERE <span class="string">"comments"</span>.<span class="string">"post_id"</span> IN (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p><code>更优雅的方式参见gem goldiloader</code></p>
+<p>####关于rails N+1问题<br> 在rails处理关联关系的时候出现，如果使用普通的查询，会先去执行查找父的条件，然后在去逐一查询子表的关联数据，如果使用include查询，则会只进行两次的条件查询<br> 减少与数据库的交互，一定程度上增加程序的查询效率，是比较常见的开发中会出现的问题</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Rails/" rel="tag"># Rails</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/04/git/" rel="next" title="git">
+                <i class="fa fa-chevron-left"></i> git
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/04/photo_clone/" rel="prev" title="爬虫">
+                爬虫 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
