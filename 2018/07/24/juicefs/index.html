@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="备份," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="rails 日志备份, 数据库备份###使用 logrotate  logrotate是作为linux系统日志的管理工具存在。他可以轮换，压缩，邮件系统日志文件。默认的logrotate被加入cron的/etc/cron.daily中作为每日任务执行。 /etc/logrotate.conf为其默认配置文件指定每个日志文件的默认规则。 /etc/logrotate.d/*  为/etc/logro">
+<meta name="keywords" content="备份">
+<meta property="og:type" content="article">
+<meta property="og:title" content="juicefs">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/juicefs/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="rails 日志备份, 数据库备份###使用 logrotate  logrotate是作为linux系统日志的管理工具存在。他可以轮换，压缩，邮件系统日志文件。默认的logrotate被加入cron的/etc/cron.daily中作为每日任务执行。 /etc/logrotate.conf为其默认配置文件指定每个日志文件的默认规则。 /etc/logrotate.d/*  为/etc/logro">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T14:12:44.199Z">
+<meta property="og:updated_time" content="2018-07-25T02:57:27.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="juicefs">
+<meta name="twitter:description" content="rails 日志备份, 数据库备份###使用 logrotate  logrotate是作为linux系统日志的管理工具存在。他可以轮换，压缩，邮件系统日志文件。默认的logrotate被加入cron的/etc/cron.daily中作为每日任务执行。 /etc/logrotate.conf为其默认配置文件指定每个日志文件的默认规则。 /etc/logrotate.d/*  为/etc/logro">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/24/juicefs/"/>
 
 
 
 
 
-  <title>tags | Aaron's Blog</title>
+  <title>juicefs | Aaron's Blog</title>
   
 
 
@@ -250,40 +251,157 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/juicefs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Aaron.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 14 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Http/" style="font-size: 12px; color: #ccc">Http</a> <a href="/tags/Rails/" style="font-size: 30px; color: #111">Rails</a> <a href="/tags/action-cable/" style="font-size: 12px; color: #ccc">action_cable</a> <a href="/tags/gem/" style="font-size: 30px; color: #111">gem</a> <a href="/tags/git/" style="font-size: 12px; color: #ccc">git</a> <a href="/tags/linux/" style="font-size: 12px; color: #ccc">linux</a> <a href="/tags/other/" style="font-size: 12px; color: #ccc">other</a> <a href="/tags/rails/" style="font-size: 12px; color: #ccc">rails</a> <a href="/tags/备份/" style="font-size: 12px; color: #ccc">备份</a> <a href="/tags/数据库/" style="font-size: 12px; color: #ccc">数据库</a> <a href="/tags/爬虫/" style="font-size: 12px; color: #ccc">爬虫</a> <a href="/tags/算法/" style="font-size: 12px; color: #ccc">算法</a> <a href="/tags/缓存/" style="font-size: 12px; color: #ccc">缓存</a> <a href="/tags/部署/" style="font-size: 12px; color: #ccc">部署</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">juicefs</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T17:43:59+08:00">
+                2018-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="rails-日志备份-数据库备份"><a href="#rails-日志备份-数据库备份" class="headerlink" title="rails 日志备份, 数据库备份"></a>rails 日志备份, 数据库备份</h2><p>###使用 logrotate</p>
+<ul>
+<li>logrotate是作为linux系统日志的管理工具存在。他可以轮换，压缩，邮件系统日志文件。默认的logrotate被加入cron的/etc/cron.daily中作为每日任务执行。</li>
+<li>/etc/logrotate.conf为其默认配置文件指定每个日志文件的默认规则。</li>
+<li>/etc/logrotate.d/*  为/etc/logrotate.conf默认包含目录其中文件也会被logrotate读取。指明每个日志文件的特定规则。<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/home/wangliyao/demo/Keepa/log/production.log &#123;</span><br><span class="line">  daily <span class="comment"># 指定转储周期为每天</span></span><br><span class="line">  dateext <span class="comment"># 使用时间作为后缀</span></span><br><span class="line">  missingok <span class="comment"># 没有记录文件也不会出现错误。</span></span><br><span class="line">  rotate <span class="number">365</span> <span class="comment">#存储365分文件</span></span><br><span class="line">  compress <span class="comment"># 通过gzip 压缩转储以后的日志</span></span><br><span class="line">  delaycompress <span class="comment"># 延迟压缩</span></span><br><span class="line">  notifempty <span class="comment"># 如果是空文件的话，不转储</span></span><br><span class="line">  copytruncate <span class="comment"># 用于还在打开中的日志文件，把当前日志备份并截断</span></span><br><span class="line">  lastaction <span class="comment"># 运行需要执行的操作</span></span><br><span class="line">    rsync -au *.gz /jfs/rails-logs/<span class="string">`hostname -s`</span>/</span><br><span class="line">  endscript <span class="comment"># 加入lastaction 之后必须跟随endscript</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p>###使用 juicefs</p>
+<ul>
+<li>依赖云服务的对象存储，可应用于备份数据库，备份日志文件</li>
+<li><a href="https://juicefs.io/docs/zh/intro.html" target="_blank" rel="noopener">juicfs 文档</a></li>
+<li><a href="https://juicefs.io/blog/cn/backup-nginx-logs-on-juicefs/" target="_blank" rel="noopener">juicfs 备份nginx</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/备份/" rel="tag"># 备份</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/04/rails N+1 问题/" rel="next" title="rails n + 1">
+                <i class="fa fa-chevron-left"></i> rails n + 1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -316,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -397,6 +524,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#rails-日志备份-数据库备份"><span class="nav-number">1.</span> <span class="nav-text">rails 日志备份, 数据库备份</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
