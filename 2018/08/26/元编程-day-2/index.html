@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数据库," />
+  <meta name="keywords" content="元编程," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="使用postgre导出csv文件 使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv;  COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’); mac excel 打开乱码问题 iconv">
-<meta name="keywords" content="数据库">
+<meta name="description" content="符号表示事物的名字  符号是不可修改的:x 字符串是可以修改的  send 方法可以调用任何方法，包括私有方法，所以安全的应该是 public_send方法   12345678class MyClass  define_method :my_method do |arg|    arg*3  endendobj = MyClass.new # =&amp;gt; #&amp;lt;MyClass:0x007f">
+<meta name="keywords" content="元编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="postgresql 导出">
-<meta property="og:url" content="http://yoursite.com/2018/07/04/postgre导出csv文件/index.html">
+<meta property="og:title" content="元编程 day 2">
+<meta property="og:url" content="http://yoursite.com/2018/08/26/元编程-day-2/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="使用postgre导出csv文件 使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv;  COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’); mac excel 打开乱码问题 iconv">
+<meta property="og:description" content="符号表示事物的名字  符号是不可修改的:x 字符串是可以修改的  send 方法可以调用任何方法，包括私有方法，所以安全的应该是 public_send方法   12345678class MyClass  define_method :my_method do |arg|    arg*3  endendobj = MyClass.new # =&amp;gt; #&amp;lt;MyClass:0x007f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-04T05:38:05.915Z">
+<meta property="og:updated_time" content="2018-08-26T15:34:37.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="postgresql 导出">
-<meta name="twitter:description" content="使用postgre导出csv文件 使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv;  COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’); mac excel 打开乱码问题 iconv">
+<meta name="twitter:title" content="元编程 day 2">
+<meta name="twitter:description" content="符号表示事物的名字  符号是不可修改的:x 字符串是可以修改的  send 方法可以调用任何方法，包括私有方法，所以安全的应该是 public_send方法   12345678class MyClass  define_method :my_method do |arg|    arg*3  endendobj = MyClass.new # =&amp;gt; #&amp;lt;MyClass:0x007f">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/04/postgre导出csv文件/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/26/元编程-day-2/"/>
 
 
 
 
 
-  <title>postgresql 导出 | Aaron's Blog</title>
+  <title>元编程 day 2 | Aaron's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/postgre导出csv文件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/元编程-day-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">postgresql 导出</h1>
+          <h1 class="post-title" itemprop="name headline">元编程 day 2</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
-                2018-07-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-26T23:31:29+08:00">
+                2018-08-26
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
                   </a>
                 </span>
 
@@ -352,10 +352,26 @@
       
 
       
-        <h2 id="使用postgre导出csv文件"><a href="#使用postgre导出csv文件" class="headerlink" title="使用postgre导出csv文件"></a>使用postgre导出csv文件</h2><ul>
-<li>使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; </li>
-<li>COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’);</li>
-<li>mac excel 打开乱码问题 iconv -f UTF8 -t GB18030 a.csv &gt;b.csv</li>
+        <ul>
+<li><p>符号表示事物的名字</p>
+</li>
+<li><p>符号是不可修改的:x 字符串是可以修改的</p>
+</li>
+<li><p>send 方法可以调用任何方法，包括私有方法，所以安全的应该是 public_send方法</p>
+</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></span><br><span class="line">  define_method <span class="symbol">:my_method</span> <span class="keyword">do</span> <span class="params">|arg|</span></span><br><span class="line">    arg*<span class="number">3</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">obj = MyClass.new <span class="comment"># =&gt; #&lt;MyClass:0x007fddc9a07478&gt;</span></span><br><span class="line">obj.my_method(<span class="number">2</span>) <span class="comment"># =&gt; 6</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>String 中 grep 方法会传递一个块，那么对于每个满足正则的元素，这个块都会执行</li>
+<li>method_missing方法</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lawyer</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">method_missing</span><span class="params">(method,*arg)</span></span></span><br><span class="line">    puts <span class="string">"you called : <span class="subst">#&#123;method&#125;</span>(<span class="subst">#&#123;arg.join(<span class="string">','</span>)&#125;</span>)”</span></span><br><span class="line"><span class="string">    puts "</span>(you also passed it block)<span class="string">" if block_given?</span></span><br><span class="line"><span class="string">  end</span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">bob = Lawyer.new</span></span><br><span class="line"><span class="string">bob.talk_simple('a','b') do</span></span><br><span class="line"><span class="string">  # a block</span></span><br><span class="line"><span class="string">end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>白板类 BasicObject </li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">im = BasicObject.instance_methods</span><br><span class="line">[<span class="symbol">:</span>!, <span class="symbol">:==</span>, <span class="symbol">:</span>!=, <span class="symbol">:__send__</span>, <span class="symbol">:equal?</span>, <span class="symbol">:instance_eval</span>, <span class="symbol">:instance_exec</span>, <span class="symbol">:__id__</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除方法 remove_method ,under_method</li>
 </ul>
 
       
@@ -374,7 +390,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+            <a href="/tags/元编程/" rel="tag"># 元编程</a>
           
         </div>
       
@@ -387,8 +403,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/04/rails N+1 问题/" rel="next" title="rails n + 1">
-                <i class="fa fa-chevron-left"></i> rails n + 1
+              <a href="/2018/08/26/元编程-day-1/" rel="next" title="元编程 day 1">
+                <i class="fa fa-chevron-left"></i> 元编程 day 1
               </a>
             
           </div>
@@ -397,8 +413,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/04/wechat接口开发/" rel="prev" title="wechat 开发">
-                wechat 开发 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/26/元编程-day-3/" rel="prev" title="元编程 day 3">
+                元编程 day 3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -451,17 +467,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -541,22 +548,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用postgre导出csv文件"><span class="nav-number">1.</span> <span class="nav-text">使用postgre导出csv文件</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
