@@ -262,6 +262,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/元编程-day-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Aaron.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/26/元编程-day-1/" itemprop="url">元编程 day 1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-26T23:24:04+08:00">
+                2018-08-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+ruby 当中的常量 ::M 代表该常量的绝对路径
+
+include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会插入祖先链的上方如果一个模块已经存在于祖先链之中，再次include 或者prepend 会自动忽略该指令 
+
+查询该class 或者 modu
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/26/元编程-day-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/https-nginx-配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -539,7 +692,7 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/postgre导出csv文件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/rails N+1 问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -558,7 +711,7 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/04/postgre导出csv文件/" itemprop="url">postgresql 导出</a></h1>
+                <a class="post-title-link" href="/2018/07/04/rails N+1 问题/" itemprop="url">rails n + 1</a></h1>
         
 
         <div class="post-meta">
@@ -593,8 +746,8 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/Rails/" itemprop="url" rel="index">
+                    <span itemprop="name">Rails</span>
                   </a>
                 </span>
 
@@ -632,168 +785,13 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
       
         
           
-          使用postgre导出csv文件
-使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; 
-COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV,
+          ##Rails N+1查询及解决方式
+Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况
+123456789101112131415161718class Post &lt; ApplicationRecord  has_many :commentsendclass Comm
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/postgre导出csv文件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aaron">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aaron's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/04/git/" itemprop="url">git</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
-                2018-07-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git命令/" itemprop="url" rel="index">
-                    <span itemprop="name">git命令</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          git 提交 遇到远程仓库readme 文件与本地不能同步
-fatal: refusing to merge unrelated histories
-
-git pull github master –allow-unrelated-histories
-
-git 删除本地remote
-
-git rem
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/git/#more" rel="contents">
+            <a class="btn" href="/2018/07/04/rails N+1 问题/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -942,6 +940,159 @@ git rem
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/04/BaiduPushWork/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/photo_clone/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Aaron.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/04/photo_clone/" itemprop="url">爬虫</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/gem/" itemprop="url" rel="index">
+                    <span itemprop="name">gem</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          关于个人写小爬虫的积累所用gem
+gem ‘nokogiri’
+gem “http”  
+
+
+关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码123456789101
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/04/photo_clone/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1148,7 +1299,7 @@ git rem
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/cookie和session/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -1167,7 +1318,7 @@ git rem
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/04/cookie和session/" itemprop="url">cookies session</a></h1>
+                <a class="post-title-link" href="/2018/07/04/git/" itemprop="url">git</a></h1>
         
 
         <div class="post-meta">
@@ -1202,8 +1353,8 @@ git rem
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Http/" itemprop="url" rel="index">
-                    <span itemprop="name">Http</span>
+                  <a href="/categories/git命令/" itemprop="url" rel="index">
+                    <span itemprop="name">git命令</span>
                   </a>
                 </span>
 
@@ -1241,14 +1392,18 @@ git rem
       
         
           
-          ##关于cookie和session的区别
+          git 提交 遇到远程仓库readme 文件与本地不能同步
+fatal: refusing to merge unrelated histories
 
-首先cookie的特性:cookie是存于用户浏览器中的，特点是不会占用系统资源，存在时间短，cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗 考虑到安全应当使用session。
-session会在一定时间内保存在服务器
+git pull github master –allow-unrelated-histories
+
+git 删除本地remote
+
+git rem
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/cookie和session/#more" rel="contents">
+            <a class="btn" href="/2018/07/04/git/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1299,7 +1454,7 @@ session会在一定时间内保存在服务器
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/photo_clone/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/postgre导出csv文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -1318,7 +1473,7 @@ session会在一定时间内保存在服务器
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/04/photo_clone/" itemprop="url">爬虫</a></h1>
+                <a class="post-title-link" href="/2018/07/04/postgre导出csv文件/" itemprop="url">postgresql 导出</a></h1>
         
 
         <div class="post-meta">
@@ -1353,8 +1508,8 @@ session会在一定时间内保存在服务器
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/gem/" itemprop="url" rel="index">
-                    <span itemprop="name">gem</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -1392,16 +1547,13 @@ session会在一定时间内保存在服务器
       
         
           
-          关于个人写小爬虫的积累所用gem
-gem ‘nokogiri’
-gem “http”  
-
-
-关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码123456789101
+          使用postgre导出csv文件
+使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; 
+COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV,
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/photo_clone/#more" rel="contents">
+            <a class="btn" href="/2018/07/04/postgre导出csv文件/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1587,156 +1739,6 @@ gem “http”
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/rails N+1 问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aaron">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aaron's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/04/rails N+1 问题/" itemprop="url">rails n + 1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
-                2018-07-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rails/" itemprop="url" rel="index">
-                    <span itemprop="name">Rails</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ##Rails N+1查询及解决方式
-Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况
-123456789101112131415161718class Post &lt; ApplicationRecord  has_many :commentsendclass Comm
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/rails N+1 问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1791,7 +1793,7 @@ Rails在module层建立关联后，进行关联查询时会出现N+1查询的情
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1802,7 +1804,7 @@ Rails在module层建立关联后，进行关联查询时会出现N+1查询的情
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1813,7 +1815,7 @@ Rails在module层建立关联后，进行关联查询时会出现N+1查询的情
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
