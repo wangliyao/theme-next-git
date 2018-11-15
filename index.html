@@ -1455,7 +1455,7 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/一些工具和开发gem/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/postgre导出csv文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -1474,7 +1474,7 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/04/一些工具和开发gem/" itemprop="url">开发工具和 gem</a></h1>
+                <a class="post-title-link" href="/2018/07/04/postgre导出csv文件/" itemprop="url">postgresql 导出</a></h1>
         
 
         <div class="post-meta">
@@ -1509,8 +1509,8 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/gem/" itemprop="url" rel="index">
-                    <span itemprop="name">gem</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -1548,16 +1548,13 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
       
         
           
-          一些工具开发前需要准备的东西一个rubyb程序员，当然是需要翻墙的，翻墙vps 推荐
-vutrl 以前用过还是很便宜的，以前用的5美元一个月，听说现在有2.5美元一个月的了
-host1plus 网速很快，也很便宜 ，2.5美元一个月
-翻墙工具 shadowsocks ,自己搭建，自己造梯子
-
-开发工
+          使用postgre导出csv文件
+使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; 
+COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV,
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/一些工具和开发gem/#more" rel="contents">
+            <a class="btn" href="/2018/07/04/postgre导出csv文件/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1608,7 +1605,7 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/rails N+1 问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aaron">
@@ -1627,7 +1624,7 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/04/git/" itemprop="url">git</a></h1>
+                <a class="post-title-link" href="/2018/07/04/rails N+1 问题/" itemprop="url">rails n + 1</a></h1>
         
 
         <div class="post-meta">
@@ -1662,8 +1659,8 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git命令/" itemprop="url" rel="index">
-                    <span itemprop="name">git命令</span>
+                  <a href="/categories/Rails/" itemprop="url" rel="index">
+                    <span itemprop="name">Rails</span>
                   </a>
                 </span>
 
@@ -1701,18 +1698,13 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
       
         
           
-          git 提交 遇到远程仓库readme 文件与本地不能同步
-fatal: refusing to merge unrelated histories
-
-git pull github master –allow-unrelated-histories
-
-git 删除本地remote
-
-git rem
+          ##Rails N+1查询及解决方式
+Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况
+123456789101112131415161718class Post &lt; ApplicationRecord  has_many :commentsendclass Comm
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/git/#more" rel="contents">
+            <a class="btn" href="/2018/07/04/rails N+1 问题/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
