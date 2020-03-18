@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="cap test deploy 时爆出错误123456789101112131415** Invoke test (first_time)** Execute test** Invoke load:defaults (first_time)** Execute load:defaults** Invoke rbenv:validate (first_time)** Execute rbenv:va">
+<meta name="description" content="cap test deploy 时报出错误123456789101112131415** Invoke test (first_time)** Execute test** Invoke load:defaults (first_time)** Execute load:defaults** Invoke rbenv:validate (first_time)** Execute rbenv:va">
 <meta name="keywords" content="部署">
 <meta property="og:type" content="article">
 <meta property="og:title" content="capistrano 错误">
 <meta property="og:url" content="http://yoursite.com/2019/10/22/capistrano-错误/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
-<meta property="og:description" content="cap test deploy 时爆出错误123456789101112131415** Invoke test (first_time)** Execute test** Invoke load:defaults (first_time)** Execute load:defaults** Invoke rbenv:validate (first_time)** Execute rbenv:va">
+<meta property="og:description" content="cap test deploy 时报出错误123456789101112131415** Invoke test (first_time)** Execute test** Invoke load:defaults (first_time)** Execute load:defaults** Invoke rbenv:validate (first_time)** Execute rbenv:va">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-22T08:15:56.146Z">
+<meta property="og:updated_time" content="2020-03-18T02:34:33.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="capistrano 错误">
-<meta name="twitter:description" content="cap test deploy 时爆出错误123456789101112131415** Invoke test (first_time)** Execute test** Invoke load:defaults (first_time)** Execute load:defaults** Invoke rbenv:validate (first_time)** Execute rbenv:va">
+<meta name="twitter:description" content="cap test deploy 时报出错误123456789101112131415** Invoke test (first_time)** Execute test** Invoke load:defaults (first_time)** Execute load:defaults** Invoke rbenv:validate (first_time)** Execute rbenv:va">
 
 
 
@@ -330,7 +330,7 @@
       
 
       
-        <h3 id="cap-test-deploy-时爆出错误"><a href="#cap-test-deploy-时爆出错误" class="headerlink" title="cap test deploy 时爆出错误"></a>cap test deploy 时爆出错误</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">** Invoke test (first_time)</span><br><span class="line">** Execute test</span><br><span class="line">** Invoke <span class="symbol">load:</span>defaults (first_time)</span><br><span class="line">** Execute <span class="symbol">load:</span>defaults</span><br><span class="line">** Invoke <span class="symbol">rbenv:</span>validate (first_time)</span><br><span class="line">** Execute <span class="symbol">rbenv:</span>validate</span><br><span class="line">cap aborted!</span><br><span class="line">SSHKit::Runner::<span class="symbol">ExecuteError:</span> Exception <span class="keyword">while</span> executing as ubuntu@main.geekpark.<span class="symbol">net:</span> invalid encoding</span><br><span class="line">/Users/wangliyao/.rvm/gems/ruby-<span class="number">2.3</span>.<span class="number">1</span>/gems/sshkit-<span class="number">1.13</span>.<span class="number">1</span>/lib/sshkit/runners/parallel.<span class="symbol">rb:</span><span class="number">15</span><span class="symbol">:in</span> <span class="string">`rescue in block (2 levels) in execute'</span></span><br><span class="line"><span class="string">/Users/wangliyao/.rvm/gems/ruby-2.3.1/gems/sshkit-1.13.1/lib/sshkit/runners/parallel.rb:11:in `</span>block (<span class="number">2</span> levels) <span class="keyword">in</span> execute<span class="string">'</span></span><br><span class="line"><span class="string">OpenSSL::PKey::EC::Point::Error: invalid encoding</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 相关错误，百思不得其解为什么，最后</span></span><br><span class="line"><span class="string"># https://github.com/nov/json-jwt/issues/51</span></span><br><span class="line"><span class="string"># 这个链接里最下面发现说是建议删除.ssh/known_hosts 文件 应该是当前未见有无法解析的编码</span></span><br></pre></td></tr></table></figure>
+        <h3 id="cap-test-deploy-时报出错误"><a href="#cap-test-deploy-时报出错误" class="headerlink" title="cap test deploy 时报出错误"></a>cap test deploy 时报出错误</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">** Invoke test (first_time)</span><br><span class="line">** Execute test</span><br><span class="line">** Invoke <span class="symbol">load:</span>defaults (first_time)</span><br><span class="line">** Execute <span class="symbol">load:</span>defaults</span><br><span class="line">** Invoke <span class="symbol">rbenv:</span>validate (first_time)</span><br><span class="line">** Execute <span class="symbol">rbenv:</span>validate</span><br><span class="line">cap aborted!</span><br><span class="line">SSHKit::Runner::<span class="symbol">ExecuteError:</span> Exception <span class="keyword">while</span> executing as ubuntu@main.geekpark.<span class="symbol">net:</span> invalid encoding</span><br><span class="line">/Users/wangliyao/.rvm/gems/ruby-<span class="number">2.3</span>.<span class="number">1</span>/gems/sshkit-<span class="number">1.13</span>.<span class="number">1</span>/lib/sshkit/runners/parallel.<span class="symbol">rb:</span><span class="number">15</span><span class="symbol">:in</span> <span class="string">`rescue in block (2 levels) in execute'</span></span><br><span class="line"><span class="string">/Users/wangliyao/.rvm/gems/ruby-2.3.1/gems/sshkit-1.13.1/lib/sshkit/runners/parallel.rb:11:in `</span>block (<span class="number">2</span> levels) <span class="keyword">in</span> execute<span class="string">'</span></span><br><span class="line"><span class="string">OpenSSL::PKey::EC::Point::Error: invalid encoding</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 相关错误，百思不得其解为什么，最后</span></span><br><span class="line"><span class="string"># https://github.com/nov/json-jwt/issues/51</span></span><br><span class="line"><span class="string"># 这个链接里最下面发现说是建议删除.ssh/known_hosts 文件 应该是当前未见有无法解析的编码</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -369,6 +369,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/18/新服务器基本配置/" rel="prev" title="新服务器基本配置">
+                新服务器基本配置 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -449,7 +453,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -460,7 +464,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -520,7 +524,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#cap-test-deploy-时爆出错误"><span class="nav-number">1.</span> <span class="nav-text">cap test deploy 时爆出错误</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#cap-test-deploy-时报出错误"><span class="nav-number">1.</span> <span class="nav-text">cap test deploy 时报出错误</span></a></li></ol></div>
             
 
           </div>
