@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="Aaron&#39;s Blog">
 <meta property="og:description" content="个人博客">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Aaron">
 <meta name="twitter:card" content="summary">
 
@@ -39,7 +39,7 @@
     sidebar: "",
     isHome : true,
     isPost : false,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -83,7 +83,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -112,12 +112,12 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -146,8 +146,8 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/photo_clone/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/postgre%E5%AF%BC%E5%87%BAcsv%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -161,7 +161,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/07/04/photo_clone/" class="post-title-link" itemprop="url">爬虫</a>
+            <a href="/2018/07/04/postgre%E5%AF%BC%E5%87%BAcsv%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">postgresql 导出</a>
         </h2>
 
         <div class="post-meta">
@@ -169,18 +169,18 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:37:29" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:38:05" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/gem/" itemprop="url" rel="index"><span itemprop="name">gem</span></a>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
                 </span>
             </span>
 
@@ -195,20 +195,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="关于个人写小爬虫的积累"><a href="#关于个人写小爬虫的积累" class="headerlink" title="关于个人写小爬虫的积累"></a>关于个人写小爬虫的积累</h2><h3 id="所用gem"><a href="#所用gem" class="headerlink" title="所用gem"></a>所用gem</h3><ul>
-<li>gem ‘nokogiri’</li>
-<li>gem “http”  </li>
-</ul>
-<hr>
-<h4 id="关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码"><a href="#关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码" class="headerlink" title="关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码"></a>关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取所需的http页面tbody</span></span><br><span class="line">   body = HTTP.get(name).body</span><br><span class="line">     ans = []</span><br><span class="line">    <span class="keyword">while</span> body != <span class="string">&#x27;&#x27;</span> </span><br><span class="line">    <span class="comment">#遍历获取所有body页面</span></span><br><span class="line">     html = body.readpartial</span><br><span class="line">      <span class="keyword">if</span> html ==<span class="literal">nil</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      <span class="comment">#获取页面中的html然后讲所需要的img抽取出来，存入数组当中</span></span><br><span class="line">     doc = Nokogiri::HTML(html)</span><br><span class="line">     doc.search(<span class="string">&#x27;img&#x27;</span>).each <span class="keyword">do</span> <span class="params">|i|</span></span><br><span class="line">       ans &lt;&lt; i.attr(<span class="string">&#x27;src&#x27;</span>) <span class="keyword">if</span> i.attr(<span class="string">&#x27;src&#x27;</span>) != <span class="literal">nil</span></span><br><span class="line">     <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">#获取的所有html链接通过wget下载</span></span><br><span class="line">    ans.each <span class="keyword">do</span> <span class="params">|full_url|</span></span><br><span class="line">    <span class="comment">#system &quot;mkdir #&#123;Dir.getwd&#125;/photo &quot;</span></span><br><span class="line">    cmd = system <span class="string">&quot;wget -r <span class="subst">#&#123;Dir.getwd&#125;</span>/ <span class="subst">#&#123;full_url&#125;</span>&quot;</span></span><br><span class="line">    puts <span class="string">&#x27;-&#x27;</span> * <span class="number">20</span></span><br><span class="line">    p cmd</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">puts <span class="string">&#x27;success&#x27;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="项目地址为"><a href="#项目地址为" class="headerlink" title="项目地址为"></a>项目地址为</h4><ul>
-<li><blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/wangliyao/clone_photo">https://github.com/wangliyao/clone_photo</a></p>
-</blockquote>
-</li>
+          <h2 id="使用postgre导出csv文件"><a href="#使用postgre导出csv文件" class="headerlink" title="使用postgre导出csv文件"></a>使用postgre导出csv文件</h2><ul>
+<li>使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; </li>
+<li>COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’);</li>
+<li>mac excel 打开乱码问题 iconv -f UTF8 -t GB18030 a.csv &gt;b.csv</li>
 </ul>
 
       
@@ -228,7 +218,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/rails%20N+1%20%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -251,16 +241,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:39:48" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:39:48" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
                 </span>
@@ -310,7 +300,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/shadowsock+kcptun/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -333,16 +323,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:40:20" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:40:20" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
                 </span>
@@ -388,7 +378,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/wechat%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -411,16 +401,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:45:54" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:45:54" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/gem/" itemprop="url" rel="index"><span itemprop="name">gem</span></a>
                 </span>
@@ -480,7 +470,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E5%92%8C%E5%BC%80%E5%8F%91gem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -503,16 +493,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:33:55" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:33:55" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/gem/" itemprop="url" rel="index"><span itemprop="name">gem</span></a>
                 </span>
@@ -584,7 +574,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -607,22 +597,22 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2018-07-04 13:20:52" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2018-09-03 20:50:54" itemprop="dateModified" datetime="2018-09-03T20:50:54+08:00">2018-09-03</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-09-03 20:50:54" itemprop="dateModified" datetime="2018-09-03T20:50:54+08:00">2018-09-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
@@ -662,150 +652,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E8%A7%A3%E5%86%B3rails%204.2.2%20rake%E9%94%99%E8%AF%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Aaron">
-      <meta itemprop="description" content="个人博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aaron's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/07/04/%E8%A7%A3%E5%86%B3rails%204.2.2%20rake%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">Rails 4.2.2 遇到的问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:35:35" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="在rails-4-2-2中-执行rake-db-migrate-遇到报错pg-dump-invalid-option-–-i"><a href="#在rails-4-2-2中-执行rake-db-migrate-遇到报错pg-dump-invalid-option-–-i" class="headerlink" title="在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i"></a>在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i</h3> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`pg_dump -i -s -x -O -f <span class="subst">#&#123;Shellwords.escape(filename)&#125;</span> <span class="subst">#&#123;search_path&#125;</span> <span class="subst">#&#123;Shellwords.escape(config[<span class="string">&#x27;database&#x27;</span>])&#125;</span>`</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>rails 4.2.2中连接pg数据库 遇到pg_dump: invalid option – i，google一下说是因为这一句的原因 db:structure:dump task</li>
-<li>解决方案为，在initializers重新配置一个不同的ActiveRecord方法，合并起来创建一个新的db:structure:dump task ,当运行rake db的时候执行所创建的新任务<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> Rake::Task[<span class="string">&quot;db:structure:dump&quot;</span>].clear</span><br><span class="line">namespace <span class="symbol">:db</span> <span class="keyword">do</span></span><br><span class="line">  namespace <span class="symbol">:structure</span> <span class="keyword">do</span></span><br><span class="line">    desc <span class="string">&quot;Overriding the task db:structure:dump task to remove -i option from pg_dump to make postgres 9.5 compatible&quot;</span></span><br><span class="line">    task <span class="symbol">dump:</span> [<span class="symbol">:environment</span>, <span class="symbol">:load_config</span>] <span class="keyword">do</span></span><br><span class="line">      config = ActiveRecord::Base.configurations[Rails.env]</span><br><span class="line">      set_psql_env(config)</span><br><span class="line">      filename =  File.join(Rails.root, <span class="string">&quot;db&quot;</span>, <span class="string">&quot;structure.sql&quot;</span>)</span><br><span class="line">      database = config[<span class="string">&quot;database&quot;</span>]</span><br><span class="line">      command = <span class="string">&quot;pg_dump -s -x -O -f <span class="subst">#&#123;Shellwords.escape(filename)&#125;</span> <span class="subst">#&#123;Shellwords.escape(database)&#125;</span>&quot;</span></span><br><span class="line">      raise <span class="string">&#x27;Error dumping database&#x27;</span> <span class="keyword">unless</span> Kernel.system(command)</span><br><span class="line"></span><br><span class="line">      File.open(filename, <span class="string">&quot;a&quot;</span>) &#123; <span class="params">|f|</span> f &lt;&lt; <span class="string">&quot;SET search_path TO <span class="subst">#&#123;ActiveRecord::Base.connection.schema_search_path&#125;</span>;\n\n&quot;</span> &#125;</span><br><span class="line">      <span class="keyword">if</span> ActiveRecord::Base.connection.supports_migrations?</span><br><span class="line">        File.open(filename, <span class="string">&quot;a&quot;</span>) <span class="keyword">do</span> <span class="params">|f|</span></span><br><span class="line">          f.puts ActiveRecord::Base.connection.dump_schema_information</span><br><span class="line">          f.print <span class="string">&quot;\n&quot;</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      Rake::Task[<span class="string">&quot;db:structure:dump&quot;</span>].reenable</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">set_psql_env</span><span class="params">(configuration)</span></span></span><br><span class="line">    ENV[<span class="string">&#x27;PGHOST&#x27;</span>]     = configuration[<span class="string">&#x27;host&#x27;</span>]          <span class="keyword">if</span> configuration[<span class="string">&#x27;host&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGPORT&#x27;</span>]     = configuration[<span class="string">&#x27;port&#x27;</span>].to_s     <span class="keyword">if</span> configuration[<span class="string">&#x27;port&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGPASSWORD&#x27;</span>] = configuration[<span class="string">&#x27;password&#x27;</span>].to_s <span class="keyword">if</span> configuration[<span class="string">&#x27;password&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGUSER&#x27;</span>]     = configuration[<span class="string">&#x27;username&#x27;</span>].to_s <span class="keyword">if</span> configuration[<span class="string">&#x27;username&#x27;</span>]</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>  具体回答<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/35999906/pg-dump-invalid-option-i-when-migrating">pg_dump: invalid option — i” when migrating</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E9%94%99%E8%AF%AF%E7%9B%91%E6%8E%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Aaron">
-      <meta itemprop="description" content="个人博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aaron's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/07/04/%E9%94%99%E8%AF%AF%E7%9B%91%E6%8E%A7/" class="post-title-link" itemprop="url">错误监控</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:36:21" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/gem/" itemprop="url" rel="index"><span itemprop="name">gem</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="使用gem-exception-notification-报错监控"><a href="#使用gem-exception-notification-报错监控" class="headerlink" title="使用gem  exception_notification 报错监控"></a>使用gem  exception_notification 报错监控</h2> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">config.action_mailer.smtp_settings = &#123;</span><br><span class="line">     <span class="symbol">:address</span>              =&gt; <span class="string">&quot;smtp.163.com&quot;</span>,</span><br><span class="line">     <span class="symbol">:port</span>                 =&gt; <span class="number">25</span>,</span><br><span class="line">     <span class="symbol">:domain</span>               =&gt; <span class="string">&quot;163.com&quot;</span>,</span><br><span class="line">     <span class="symbol">:user_name</span>            =&gt; <span class="string">&quot;username&quot;</span>,</span><br><span class="line">     <span class="symbol">:password</span>             =&gt; <span class="string">&quot;password&quot;</span>,<span class="comment">#此处密码是授权密码 </span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> config.middleware.use ExceptionNotification::Rack,</span><br><span class="line">                       <span class="symbol">:email</span> =&gt; &#123;</span><br><span class="line">                           <span class="symbol">:sender_address</span> =&gt; <span class="string">%&#123;username&#125;</span>,</span><br><span class="line">                           <span class="symbol">:exception_recipients</span> =&gt; <span class="string">%w&#123;&#x27;xxx@xxxmail.com&#x27;&#125;</span></span><br><span class="line">                       &#125;</span><br><span class="line">                       </span><br></pre></td></tr></table></figure>
-<h2 id="163邮箱设置"><a href="#163邮箱设置" class="headerlink" title="163邮箱设置"></a>163邮箱设置</h2><p><img src="http://img.blog.csdn.net/20160504000538104"><br><img src="http://img.blog.csdn.net/20160504000607886"><br><img src="http://img.blog.csdn.net/20160504000607886"></p>
-<h1 id="qq企业邮箱设置"><a href="#qq企业邮箱设置" class="headerlink" title="qq企业邮箱设置"></a>qq企业邮箱设置</h1> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">config.action_mailer.delivery_method = <span class="symbol">:smtp</span></span><br><span class="line"></span><br><span class="line">config.action_mailer.smtp_settings = &#123;</span><br><span class="line">    <span class="symbol">address:</span> <span class="string">&quot;smtp.exmail.qq.com&quot;</span>,</span><br><span class="line">    <span class="symbol">port:</span> <span class="number">465</span>,</span><br><span class="line">    <span class="symbol">domain:</span> <span class="string">&quot;exmail.qq.com&quot;</span>,</span><br><span class="line">      <span class="symbol">user_name:</span> <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="symbol">password:</span> <span class="string">&#x27;xxxx&#x27;</span>,</span><br><span class="line">    <span class="symbol">:authentication</span>       =&gt; <span class="symbol">:login</span>,</span><br><span class="line">    <span class="symbol">:ssl</span> =&gt; <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line">                        </span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E7%BC%93%E5%AD%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -828,16 +675,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="Created: 2018-07-04 13:20:52 / Modified: 13:35:00" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:35:00" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E7%BC%93%E5%AD%98/" itemprop="url" rel="index"><span itemprop="name">缓存</span></a>
                 </span>
@@ -882,10 +729,153 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E8%A7%A3%E5%86%B3rails%204.2.2%20rake%E9%94%99%E8%AF%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/04/%E8%A7%A3%E5%86%B3rails%204.2.2%20rake%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">Rails 4.2.2 遇到的问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:35:35" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="在rails-4-2-2中-执行rake-db-migrate-遇到报错pg-dump-invalid-option-–-i"><a href="#在rails-4-2-2中-执行rake-db-migrate-遇到报错pg-dump-invalid-option-–-i" class="headerlink" title="在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i"></a>在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i</h3> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`pg_dump -i -s -x -O -f <span class="subst">#&#123;Shellwords.escape(filename)&#125;</span> <span class="subst">#&#123;search_path&#125;</span> <span class="subst">#&#123;Shellwords.escape(config[<span class="string">&#x27;database&#x27;</span>])&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>rails 4.2.2中连接pg数据库 遇到pg_dump: invalid option – i，google一下说是因为这一句的原因 db:structure:dump task</li>
+<li>解决方案为，在initializers重新配置一个不同的ActiveRecord方法，合并起来创建一个新的db:structure:dump task ,当运行rake db的时候执行所创建的新任务<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> Rake::Task[<span class="string">&quot;db:structure:dump&quot;</span>].clear</span><br><span class="line">namespace <span class="symbol">:db</span> <span class="keyword">do</span></span><br><span class="line">  namespace <span class="symbol">:structure</span> <span class="keyword">do</span></span><br><span class="line">    desc <span class="string">&quot;Overriding the task db:structure:dump task to remove -i option from pg_dump to make postgres 9.5 compatible&quot;</span></span><br><span class="line">    task <span class="symbol">dump:</span> [<span class="symbol">:environment</span>, <span class="symbol">:load_config</span>] <span class="keyword">do</span></span><br><span class="line">      config = ActiveRecord::Base.configurations[Rails.env]</span><br><span class="line">      set_psql_env(config)</span><br><span class="line">      filename =  File.join(Rails.root, <span class="string">&quot;db&quot;</span>, <span class="string">&quot;structure.sql&quot;</span>)</span><br><span class="line">      database = config[<span class="string">&quot;database&quot;</span>]</span><br><span class="line">      command = <span class="string">&quot;pg_dump -s -x -O -f <span class="subst">#&#123;Shellwords.escape(filename)&#125;</span> <span class="subst">#&#123;Shellwords.escape(database)&#125;</span>&quot;</span></span><br><span class="line">      raise <span class="string">&#x27;Error dumping database&#x27;</span> <span class="keyword">unless</span> Kernel.system(command)</span><br><span class="line"></span><br><span class="line">      File.open(filename, <span class="string">&quot;a&quot;</span>) &#123; <span class="params">|f|</span> f &lt;&lt; <span class="string">&quot;SET search_path TO <span class="subst">#&#123;ActiveRecord::Base.connection.schema_search_path&#125;</span>;\n\n&quot;</span> &#125;</span><br><span class="line">      <span class="keyword">if</span> ActiveRecord::Base.connection.supports_migrations?</span><br><span class="line">        File.open(filename, <span class="string">&quot;a&quot;</span>) <span class="keyword">do</span> <span class="params">|f|</span></span><br><span class="line">          f.puts ActiveRecord::Base.connection.dump_schema_information</span><br><span class="line">          f.print <span class="string">&quot;\n&quot;</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      Rake::Task[<span class="string">&quot;db:structure:dump&quot;</span>].reenable</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">set_psql_env</span><span class="params">(configuration)</span></span></span><br><span class="line">    ENV[<span class="string">&#x27;PGHOST&#x27;</span>]     = configuration[<span class="string">&#x27;host&#x27;</span>]          <span class="keyword">if</span> configuration[<span class="string">&#x27;host&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGPORT&#x27;</span>]     = configuration[<span class="string">&#x27;port&#x27;</span>].to_s     <span class="keyword">if</span> configuration[<span class="string">&#x27;port&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGPASSWORD&#x27;</span>] = configuration[<span class="string">&#x27;password&#x27;</span>].to_s <span class="keyword">if</span> configuration[<span class="string">&#x27;password&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGUSER&#x27;</span>]     = configuration[<span class="string">&#x27;username&#x27;</span>].to_s <span class="keyword">if</span> configuration[<span class="string">&#x27;username&#x27;</span>]</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>  具体回答<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/35999906/pg-dump-invalid-option-i-when-migrating">pg_dump: invalid option — i” when migrating</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/%E9%94%99%E8%AF%AF%E7%9B%91%E6%8E%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/04/%E9%94%99%E8%AF%AF%E7%9B%91%E6%8E%A7/" class="post-title-link" itemprop="url">错误监控</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2018-07-04 13:20:52 / 修改时间：13:36:21" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">2018-07-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/gem/" itemprop="url" rel="index"><span itemprop="name">gem</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="使用gem-exception-notification-报错监控"><a href="#使用gem-exception-notification-报错监控" class="headerlink" title="使用gem  exception_notification 报错监控"></a>使用gem  exception_notification 报错监控</h2> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">config.action_mailer.smtp_settings = &#123;</span><br><span class="line">     <span class="symbol">:address</span>              =&gt; <span class="string">&quot;smtp.163.com&quot;</span>,</span><br><span class="line">     <span class="symbol">:port</span>                 =&gt; <span class="number">25</span>,</span><br><span class="line">     <span class="symbol">:domain</span>               =&gt; <span class="string">&quot;163.com&quot;</span>,</span><br><span class="line">     <span class="symbol">:user_name</span>            =&gt; <span class="string">&quot;username&quot;</span>,</span><br><span class="line">     <span class="symbol">:password</span>             =&gt; <span class="string">&quot;password&quot;</span>,<span class="comment">#此处密码是授权密码 </span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> config.middleware.use ExceptionNotification::Rack,</span><br><span class="line">                       <span class="symbol">:email</span> =&gt; &#123;</span><br><span class="line">                           <span class="symbol">:sender_address</span> =&gt; <span class="string">%&#123;username&#125;</span>,</span><br><span class="line">                           <span class="symbol">:exception_recipients</span> =&gt; <span class="string">%w&#123;&#x27;xxx@xxxmail.com&#x27;&#125;</span></span><br><span class="line">                       &#125;</span><br><span class="line">                       </span><br></pre></td></tr></table></figure>
+<h2 id="163邮箱设置"><a href="#163邮箱设置" class="headerlink" title="163邮箱设置"></a>163邮箱设置</h2><p><img src="http://img.blog.csdn.net/20160504000538104"><br><img src="http://img.blog.csdn.net/20160504000607886"><br><img src="http://img.blog.csdn.net/20160504000607886"></p>
+<h1 id="qq企业邮箱设置"><a href="#qq企业邮箱设置" class="headerlink" title="qq企业邮箱设置"></a>qq企业邮箱设置</h1> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">config.action_mailer.delivery_method = <span class="symbol">:smtp</span></span><br><span class="line"></span><br><span class="line">config.action_mailer.smtp_settings = &#123;</span><br><span class="line">    <span class="symbol">address:</span> <span class="string">&quot;smtp.exmail.qq.com&quot;</span>,</span><br><span class="line">    <span class="symbol">port:</span> <span class="number">465</span>,</span><br><span class="line">    <span class="symbol">domain:</span> <span class="string">&quot;exmail.qq.com&quot;</span>,</span><br><span class="line">      <span class="symbol">user_name:</span> <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="symbol">password:</span> <span class="string">&#x27;xxxx&#x27;</span>,</span><br><span class="line">    <span class="symbol">:authentication</span>       =&gt; <span class="symbol">:login</span>,</span><br><span class="line">    <span class="symbol">:ssl</span> =&gt; <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line">                        </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
@@ -929,10 +919,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -952,18 +942,18 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">29</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">categories</span></a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
         <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">tags</span></a>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -995,7 +985,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Aaron</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
         
