@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -95,7 +95,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '',
-    scheme: 'Mist',
+    scheme: 'Muse',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -189,36 +189,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/%20" rel="section">
             
@@ -266,7 +236,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -354,23 +324,29 @@
       
         
           
+            <ul>
+<li><p>符号表示事物的名字</p>
+</li>
+<li><p>符号是不可修改的:x 字符串是可以修改的</p>
+</li>
+<li><p>send 方法可以调用任何方法，包括私有方法，所以安全的应该是 public_send方法</p>
+</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></span><br><span class="line">  define_method <span class="symbol">:my_method</span> <span class="keyword">do</span> <span class="params">|arg|</span></span><br><span class="line">    arg*<span class="number">3</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">obj = MyClass.new <span class="comment"># =&gt; #&lt;MyClass:0x007fddc9a07478&gt;</span></span><br><span class="line">obj.my_method(<span class="number">2</span>) <span class="comment"># =&gt; 6</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>String 中 grep 方法会传递一个块，那么对于每个满足正则的元素，这个块都会执行</li>
+<li>method_missing方法</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lawyer</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">method_missing</span><span class="params">(method,*arg)</span></span></span><br><span class="line">    puts <span class="string">&quot;you called : <span class="subst">#&#123;method&#125;</span>(<span class="subst">#&#123;arg.join(<span class="string">&#x27;,&#x27;</span>)&#125;</span>)”</span></span><br><span class="line"><span class="string">    puts &quot;</span>(you also passed it block)<span class="string">&quot; if block_given?</span></span><br><span class="line"><span class="string">  end</span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">bob = Lawyer.new</span></span><br><span class="line"><span class="string">bob.talk_simple(&#x27;a&#x27;,&#x27;b&#x27;) do</span></span><br><span class="line"><span class="string">  # a block</span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>白板类 BasicObject </li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">im = BasicObject.instance_methods</span><br><span class="line">[<span class="symbol">:</span>!, <span class="symbol">:==</span>, <span class="symbol">:</span>!=, <span class="symbol">:__send__</span>, <span class="symbol">:equal?</span>, <span class="symbol">:instance_eval</span>, <span class="symbol">:instance_exec</span>, <span class="symbol">:__id__</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除方法 remove_method ,under_method</li>
+</ul>
+
           
-符号表示事物的名字
-
-符号是不可修改的:x 字符串是可以修改的
-
-send 方法可以调用任何方法，包括私有方法，所以安全的应该是 public_send方法
-
-
-12345678class MyClass  define_method :my_method do |arg|    arg*3  e
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/26/%E5%85%83%E7%BC%96%E7%A8%8B-day-2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -422,7 +398,7 @@ send 方法可以调用任何方法，包括私有方法，所以安全的应该
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -510,20 +486,45 @@ send 方法可以调用任何方法，包括私有方法，所以安全的应该
       
         
           
+            <ul>
+<li><p>ruby 当中的常量 ::M 代表该常量的绝对路径</p>
+</li>
+<li><p>include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会插入祖先链的上方<br>如果一个模块已经存在于祖先链之中，再次include 或者prepend 会自动忽略该指令 </p>
+</li>
+<li><p>查询该class 或者 module 中的祖先链 Book.ancestors</p>
+</li>
+</ul>
+<ul>
+<li>self 方法不能调用private 中定义的方法</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">test_self</span></span></span><br><span class="line">   <span class="variable">@var</span> = <span class="number">10</span></span><br><span class="line">   my_method() <span class="comment">#self.my_method()</span></span><br><span class="line">   <span class="keyword">self</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">my_method</span></span></span><br><span class="line">   <span class="variable">@var</span> = <span class="variable">@var</span> + <span class="number">1</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">obj = MyClass.new</span><br><span class="line"> #&lt;MyClass:0x007fd5f89da9d8&gt;</span><br><span class="line">obj.test_self</span><br><span class="line"> #&lt;MyClass:0x007fd5f89da9d8 @var=11&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>关于细化，是因为打开类中猴子补丁的完善，通过refine 来处理，通过using 这个模块来进行调用</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">module</span> <span class="title">StringExtensions</span></span></span><br><span class="line"> refine String <span class="keyword">do</span> </span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">to_alphanumeric</span></span></span><br><span class="line">    gsub(<span class="regexp">/[\w\s]/</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">module</span> <span class="title">StringStuff</span> </span></span><br><span class="line"> using StringExtensions</span><br><span class="line"></span><br><span class="line"><span class="comment"># 细化调用只能在refine 代码块内部，using语句的位置开始到模块的结束</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在元编程上看到的单例类(单件类)，单例模式</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> &lt;&lt; self </span></span><br><span class="line">     <span class="string">&#x27;abc&#x27;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 单例类是一个隐藏的不可见的类，但是又确确实实的存在</span></span><br><span class="line"><span class="comment"># singleton_methods </span></span><br><span class="line"><span class="comment"># 单例类是为了保护该类当中只有唯一一个值或者该方法</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>单件方法 </li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&#x27;just a regular string’</span></span><br><span class="line"><span class="string">def str.title?</span></span><br><span class="line"><span class="string">  self.upcase == self</span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">str.title?</span></span><br><span class="line"><span class="string">str.singleton_methods # =&gt; [:title?]</span></span><br><span class="line"><span class="string"># 单件方法只属于当前那个对象，不属于任何类，或者方法</span></span><br><span class="line"><span class="string"># 单件类是一个对象的单件方法存活之处</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>单件类和模块的应用</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">module</span> <span class="title">MyModule</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">my_method</span>;</span> <span class="string">&#x27;hello&#x27;</span>; <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></span><br><span class="line">  <span class="class"><span class="keyword">class</span>&lt;&lt;self</span></span><br><span class="line">    <span class="keyword">include</span> MyModule</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">MyClass.my_method <span class="comment">#=&gt;”hello&quot;</span></span><br><span class="line"><span class="comment"># 单件类可以将对象的实例方法改变为对象的类方法 这种方法叫做类扩展</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">module</span> <span class="title">MyModule</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">my_method</span>;</span> ‘hello’; <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> &lt;&lt; obj </span></span><br><span class="line"> <span class="keyword">include</span> MyModule</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">obj.my_method <span class="comment">#=&gt;”hello&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对象扩展</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">obj = Object.new</span><br><span class="line">obj.extend MyModule</span><br><span class="line">obj.my_method <span class="comment"># =&gt; “hello&quot;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span></span><br><span class="line">  extend MyModule</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">MyClass.my_method <span class="comment"># =&gt;&quot;hello&quot;</span></span><br></pre></td></tr></table></figure>
+
           
-ruby 当中的常量 ::M 代表该常量的绝对路径
-
-include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会插入祖先链的上方如果一个模块已经存在于祖先链之中，再次include 或者prepend 会自动忽略该指令 
-
-查询该class 或者 modu
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/26/%E5%85%83%E7%BC%96%E7%A8%8B-day-1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -575,7 +576,7 @@ include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -663,16 +664,44 @@ include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会
       
         
           
-          Nginx + Let’s Rncrypt 配置 HttpsLet’s Encrypt 简介
-如果要启用HTTPS，我们就需要从证书授权机构(以下简称CA) 处获取一个证书，Let’s Encrypt 就是一个 CA。我们可以从 Let’s Encrypt 获得网站域名的免费的证书。这篇文章也主要讲
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/01/https-nginx-%E9%85%8D%E7%BD%AE/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="Nginx-Let’s-Rncrypt-配置-Https"><a href="#Nginx-Let’s-Rncrypt-配置-Https" class="headerlink" title="Nginx + Let’s Rncrypt 配置 Https"></a>Nginx + Let’s Rncrypt 配置 Https</h2><h3 id="Let’s-Encrypt-简介"><a href="#Let’s-Encrypt-简介" class="headerlink" title="Let’s Encrypt 简介"></a>Let’s Encrypt 简介</h3><ul>
+<li>如果要启用HTTPS，我们就需要从证书授权机构(以下简称CA) 处获取一个证书，Let’s Encrypt 就是一个 CA。我们可以从 Let’s Encrypt 获得网站域名的免费的证书。这篇文章也主要讲的是通过 Let’s Encrypt + Nginx 来让网站升级到HTTPS。</li>
+</ul>
+<h3 id="Certbot-简介"><a href="#Certbot-简介" class="headerlink" title="Certbot 简介"></a>Certbot 简介</h3><ul>
+<li><p>Certbot 是Let’s Encrypt官方推荐的获取证书的客户端，可以帮我们获取免费的Let’s Encrypt 证书。Certbot 是支持所有 Unix 内核的操作系统的，个人博客的服务器系统是Ubuntu 14.04，这篇教程也是通过在个人博客上启用HTTPS的基础上完成的。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://certbot.eff.org/lets-encrypt/ubuntutrusty-nginx">certbot 链接下载地址</a></p>
+</li>
+<li><p>下载命令</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install software-properties-common</span><br><span class="line">$ sudo<span class="built_in"> add-apt-repository </span>ppa:certbot/certbot</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install python-certbot-nginx </span><br></pre></td></tr></table></figure></li>
+<li><p>下载完之后需要将nginx中配置443端口, 因为certbot创建nginx时会使用到, 所以默认先将443端口打开</p>
+</li>
+<li><p>有两种命令可以生成 nginx对应的配置一种是直接生成并带有nginx配置(这种生成的nginx 配置不易维护)</p>
+<blockquote>
+<p>sudo certbot –nginx</p>
+</blockquote>
+</li>
+<li><p>第二种是手动创建nginx 日志</p>
+<blockquote>
+<p>sudo certbot –nginx</p>
+</blockquote>
+</li>
+<li><p>再下来因为https 有时效性所以需要写一个corntab来进行重新注册</p>
+<blockquote>
+<p>sudo certbot renew –dry-run</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h3><ul>
+<li>上面最后会生成两个文件</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span>example_com.crt;</span><br><span class="line"><span class="regexp">/etc/</span>ssl<span class="regexp">/private/</span>example_com.key;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将生成的文件写入对应的nginx配置文件中</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen <span class="number">80</span>;</span><br><span class="line">  listen <span class="number">443</span> ssl;</span><br><span class="line">  server_name www.example.com;</span><br><span class="line">  root <span class="regexp">/home/</span>arons/theme-nexts;</span><br><span class="line"></span><br><span class="line">  ssl on;</span><br><span class="line">  ssl_certificate     <span class="regexp">/etc/</span>letsencrypt<span class="regexp">/live/</span>www.example.com/fullchain.pem;</span><br><span class="line">  ssl_certificate_key <span class="regexp">/etc/</span>letsencrypt<span class="regexp">/live/</span>www.example.com/privkey.pem;</span><br><span class="line">  index index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
         
       
     </div>
@@ -724,7 +753,7 @@ include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -790,165 +819,19 @@ include 和 prepend 的区别: prepend 会插入祖先链的下方，include 会
       
         
           
-          rails 日志备份, 数据库备份使用 logrotate
-logrotate是作为linux系统日志的管理工具存在。他可以轮换，压缩，邮件系统日志文件。默认的logrotate被加入cron的/etc/cron.daily中作为每日任务执行。
-/etc/logrotate.conf为其默认配置文件
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/24/juicefs/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/BaiduPushWork/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aaron's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/04/BaiduPushWork/" itemprop="url">百度推送</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
-                2018-07-04
-              </time>
-            
-
-            
-
-            
-          </span>
+            <h2 id="rails-日志备份-数据库备份"><a href="#rails-日志备份-数据库备份" class="headerlink" title="rails 日志备份, 数据库备份"></a>rails 日志备份, 数据库备份</h2><h3 id="使用-logrotate"><a href="#使用-logrotate" class="headerlink" title="使用 logrotate"></a>使用 logrotate</h3><ul>
+<li>logrotate是作为linux系统日志的管理工具存在。他可以轮换，压缩，邮件系统日志文件。默认的logrotate被加入cron的/etc/cron.daily中作为每日任务执行。</li>
+<li>/etc/logrotate.conf为其默认配置文件指定每个日志文件的默认规则。</li>
+<li>/etc/logrotate.d/*  为/etc/logrotate.conf默认包含目录其中文件也会被logrotate读取。指明每个日志文件的特定规则。<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/home/wangliyao/demo/Keepa/log/production.log &#123;</span><br><span class="line">  daily <span class="comment"># 指定转储周期为每天</span></span><br><span class="line">  dateext <span class="comment"># 使用时间作为后缀</span></span><br><span class="line">  missingok <span class="comment"># 没有记录文件也不会出现错误。</span></span><br><span class="line">  rotate <span class="number">365</span> <span class="comment">#存储365分文件</span></span><br><span class="line">  compress <span class="comment"># 通过gzip 压缩转储以后的日志</span></span><br><span class="line">  delaycompress <span class="comment"># 延迟压缩</span></span><br><span class="line">  notifempty <span class="comment"># 如果是空文件的话，不转储</span></span><br><span class="line">  copytruncate <span class="comment"># 用于还在打开中的日志文件，把当前日志备份并截断</span></span><br><span class="line">  lastaction <span class="comment"># 运行需要执行的操作</span></span><br><span class="line">    rsync -au *.gz /jfs/rails-logs/<span class="string">`hostname -s`</span>/</span><br><span class="line">  endscript <span class="comment"># 加入lastaction 之后必须跟随endscript</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h3 id="使用-juicefs"><a href="#使用-juicefs" class="headerlink" title="使用 juicefs"></a>使用 juicefs</h3><ul>
+<li>依赖云服务的对象存储，可应用于备份数据库，备份日志文件</li>
+<li><a target="_blank" rel="noopener" href="https://juicefs.io/docs/zh/intro.html">juicfs 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://juicefs.io/blog/cn/backup-nginx-logs-on-juicefs/">juicfs 备份nginx</a></li>
+</ul>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/other/" itemprop="url" rel="index">
-                    <span itemprop="name">other</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          百度站长推送，推送文章信息给百度，由百度抓取12345678require &#x27;net/http&#x27;urls = [&#x27;http://www.example.com/1.html&#x27;, &#x27;http://www.example.com/2.html&#x27;
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/BaiduPushWork/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1000,7 +883,7 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1088,15 +971,154 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
       
         
           
-          actioncable 在rails api 中使用123456789101112131415161718192021class PostChannel &lt; ApplicationCable::Channel  def subscribed    logger.warn &quot;curre
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/WebScoket/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="actioncable-在rails-api-中使用"><a href="#actioncable-在rails-api-中使用" class="headerlink" title="actioncable 在rails api 中使用"></a>actioncable 在rails api 中使用</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PostChannel</span> &lt; ApplicationCable::Channel</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">subscribed</span></span></span><br><span class="line">    logger.warn <span class="string">&quot;current connections: <span class="subst">#&#123;ActionCable.server.connections.count&#125;</span>&quot;</span></span><br><span class="line">    stream_from <span class="string">&quot;post:<span class="subst">#&#123;params[<span class="symbol">:id</span>]&#125;</span>:channel&quot;</span></span><br><span class="line">    <span class="variable">$redis</span>.zadd(<span class="string">&quot;post_<span class="subst">#&#123;params[<span class="symbol">:id</span>]&#125;</span>_channel&quot;</span>, Time.now.to_i, params[<span class="symbol">:username</span>])</span><br><span class="line">    broadcast_to(params[<span class="symbol">:id</span>])</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">unsubscribed</span></span></span><br><span class="line">    <span class="variable">$redis</span>.zrem(<span class="string">&quot;post_<span class="subst">#&#123;params[<span class="symbol">:id</span>]&#125;</span>_channel&quot;</span>, params[<span class="symbol">:username</span>])</span><br><span class="line">    broadcast_to(params[<span class="symbol">:id</span>])</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  private</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">broadcast_to</span><span class="params">(id)</span></span></span><br><span class="line">    num = <span class="variable">$redis</span>.zrange(<span class="string">&quot;post_<span class="subst">#&#123;id&#125;</span>_channel&quot;</span>, <span class="number">0</span>, -<span class="number">1</span>)</span><br><span class="line">    <span class="variable">$redis</span>.del(<span class="string">&quot;post_<span class="subst">#&#123;id&#125;</span>_channel&quot;</span>) <span class="keyword">if</span> num.blank?</span><br><span class="line">    ActionCable.server.broadcast <span class="string">&quot;post:<span class="subst">#&#123;id&#125;</span>:channel&quot;</span>, num</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="其他Gem-使用-有很好的文章参阅"><a href="#其他Gem-使用-有很好的文章参阅" class="headerlink" title="其他Gem 使用 有很好的文章参阅"></a>其他Gem 使用 有很好的文章参阅</h3><p><a target="_blank" rel="noopener" href="https://www.rails365.net/articles/websocket-xu-lie-wen-zhang-mu-lu">Rails 365 websocket</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/BaiduPushWork/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aaron's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/04/BaiduPushWork/" itemprop="url">百度推送</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T13:20:52+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">other</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="百度站长推送，推送文章信息给百度，由百度抓取"><a href="#百度站长推送，推送文章信息给百度，由百度抓取" class="headerlink" title="百度站长推送，推送文章信息给百度，由百度抓取"></a>百度站长推送，推送文章信息给百度，由百度抓取</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">&#x27;net/http&#x27;</span></span><br><span class="line">urls = [<span class="string">&#x27;http://www.example.com/1.html&#x27;</span>, <span class="string">&#x27;http://www.example.com/2.html&#x27;</span>]</span><br><span class="line">uri = URI.parse(<span class="string">&#x27;http://data.zz.baidu.com/urls?appid=1536768227928825&amp;token=dpVt55TFcSh1xIue&amp;type=realtime&#x27;</span>)</span><br><span class="line">req = Net::HTTP::Post.new(uri.request_uri)</span><br><span class="line">req.body = urls.join(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">req.content_type = <span class="string">&#x27;text/plain&#x27;</span></span><br><span class="line">res = Net::HTTP.start(uri.hostname, uri.port) &#123; <span class="params">|http|</span> http.request(req) &#125;</span><br><span class="line">puts res.body</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 返回参数格式</span></span><br><span class="line"> &#123;</span><br><span class="line">    <span class="string">&quot;remain&quot;</span>: <span class="number">4999999</span>, <span class="comment">#当天剩余可推送到新增内容的url条数 </span></span><br><span class="line">    <span class="string">&quot;success&quot;</span>: <span class="number">1</span>, <span class="comment"># 当天成功推送到新增内容的url条数</span></span><br><span class="line">    <span class="string">&quot;remain_realtime&quot;</span>: <span class="number">9</span>,</span><br><span class="line">    <span class="string">&quot;success_realtime&quot;</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
         
       
     </div>
@@ -1148,7 +1170,7 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1236,18 +1258,15 @@ logrotate是作为linux系统日志的管理工具存在。他可以轮换，压
       
         
           
-          ##关于cookie和session的区别
+            <p>##关于cookie和session的区别</p>
+<ul>
+<li>首先cookie的特性:cookie是存于用户浏览器中的，特点是不会占用系统资源，存在时间短，cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br> 考虑到安全应当使用session。</li>
+<li>session会在一定时间内保存在服务器上.当访问增多，会比较占用你服务器的性能考虑到减轻服务器性能方面，应当使用COOKIE。</li>
+<li>其实session生存会将key信息保存到cookie中，value保存在service中，session使用时，会去通过cookie中所存的信息匹配service中存的信息，所以seesion是相对于<br>cookie来说比较安全的，而且一旦用户禁用cookie，就会导致系统问题</li>
+<li>在相对不重要的信息可以保存在cookie中，重要的信息，如登录信息，则是保存在session中</li>
+</ul>
 
-首先cookie的特性:cookie是存于用户浏览器中的，特点是不会占用系统资源，存在时间短，cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗 考虑到安全应当使用session。
-session会在一定时间内保存在服务器
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/cookie%E5%92%8Csession/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1299,7 +1318,7 @@ session会在一定时间内保存在服务器
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1387,22 +1406,24 @@ session会在一定时间内保存在服务器
       
         
           
-          git 提交 遇到远程仓库readme 文件与本地不能同步
-fatal: refusing to merge unrelated histories
+            <h3 id="git-提交-遇到远程仓库readme-文件与本地不能同步"><a href="#git-提交-遇到远程仓库readme-文件与本地不能同步" class="headerlink" title="git 提交 遇到远程仓库readme 文件与本地不能同步"></a>git 提交 遇到远程仓库readme 文件与本地不能同步</h3><hr>
+<p>fatal: refusing to merge unrelated histories</p>
+<ul>
+<li>git pull github master –allow-unrelated-histories</li>
+</ul>
+<h3 id="git-删除本地remote"><a href="#git-删除本地remote" class="headerlink" title="git 删除本地remote"></a>git 删除本地remote</h3><hr>
+<ul>
+<li>git remote rm origin </li>
+<li>git remote add origin xxx</li>
+</ul>
+<h3 id="git-force-提交"><a href="#git-force-提交" class="headerlink" title="git force 提交"></a>git force 提交</h3><hr>
+<ul>
+<li>git add file </li>
+<li>git commit –amend</li>
+<li>git push origin master –froce </li>
+</ul>
 
-git pull github master –allow-unrelated-histories
-
-git 删除本地remote
-
-git rem
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/git/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1454,7 +1475,7 @@ git rem
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1542,24 +1563,22 @@ git rem
       
         
           
-          nginx + puma部署原文1原文2
+            <h1 id="nginx-puma部署"><a href="#nginx-puma部署" class="headerlink" title="nginx + puma部署"></a>nginx + puma部署</h1><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000002918225">原文1</a><br><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/8bf68700066a">原文2</a></p>
+<ul>
+<li>在rails项目的Gemfile</li>
+</ul>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Gemfile</span></span><br><span class="line">group <span class="symbol">:production</span> <span class="keyword">do</span></span><br><span class="line">  gem <span class="string">&#x27;puma&#x27;</span></span><br><span class="line"><span class="keyword">end</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#运行</span></span><br><span class="line">bundle install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-在rails项目的Gemfile
+<ul>
+<li>配置puma,注意补全缺失文件夹</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#config/puma.rb</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">#!/usr/bin/env puma</span></span><br><span class="line"><span class="comment"># rails的运行环境</span></span><br><span class="line">environment <span class="string">&#x27;production&#x27;</span></span><br><span class="line"><span class="comment"># 以守护进程的方式启动</span></span><br><span class="line">daemonize <span class="literal">true</span></span><br><span class="line"><span class="comment"># 定义文件存放目录</span></span><br><span class="line">app_dir = File.expand_path(<span class="string">&quot;../..&quot;</span>, <span class="keyword">__FILE__</span>)</span><br><span class="line">shared_dir = <span class="string">&quot;<span class="subst">#&#123;app_dir&#125;</span>/shared&quot;</span></span><br><span class="line"><span class="comment"># pid存放位置</span></span><br><span class="line">pidfile <span class="string">&quot;<span class="subst">#&#123;shared_dir&#125;</span>/pids/puma.pid&quot;</span></span><br><span class="line"><span class="comment"># 日志文件存放位置 标准输出和错误输出</span></span><br><span class="line">stdout_redirect <span class="string">&quot;<span class="subst">#&#123;shared_dir&#125;</span>/logs/stdout&quot;</span>,<span class="string">&quot;<span class="subst">#&#123;shared_dir&#125;</span>/logs/stderr&quot;</span></span><br><span class="line"><span class="comment"># puma状态位置</span></span><br><span class="line">state_path <span class="string">&quot;<span class="subst">#&#123;shared_dir&#125;</span>/state/puma.state&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不确定线程是否安全 所以最大线程设置为1</span></span><br><span class="line">threads <span class="number">1</span>,<span class="number">1</span></span><br><span class="line">workers <span class="number">2</span></span><br><span class="line"></span><br><span class="line">bind <span class="string">&quot;unix:<span class="subst">#&#123;shared_dir&#125;</span>/sock/puma.sock&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启时显示提示信息</span></span><br><span class="line">on_restart <span class="keyword">do</span></span><br><span class="line">  puts <span class="string">&#x27;On restart...&#x27;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">preload_app!</span><br></pre></td></tr></table></figure>
 
-12345678# Gemfilegroup :production do  gem &#x27;puma&#x27;end #运行bundle install
+<ul>
+<li>配置nginx<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#nginx.conf</span></span><br><span class="line"> <span class="keyword">user</span> <span class="title">xxx</span>;</span><br><span class="line"> worker_processes  <span class="number">1</span>;</span><br><span class="line"> error_log  logs/error.log;</span><br><span class="line"> pid        logs/nginx.pid;</span><br><span class="line"> keepalive_timeout  <span class="number">180</span>;</span><br><span class="line"> upstream deploy&#123;</span><br><span class="line">    server unix:puma配置的sock路径/puma.sock <span class="attr">fail_timeout=</span><span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">   server &#123;</span><br><span class="line">      listen       <span class="number">80</span>;</span><br><span class="line">      server_name  localhost;</span><br><span class="line">      root 项目目录/public;</span><br><span class="line"></span><br><span class="line">      <span class="comment">#charset koi8-r;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">location</span> <span class="title">/ &#123;</span></span><br><span class="line"><span class="title">           proxy_pass</span> http://deploy; <span class="comment"># match the name of upstream directive which is defined above</span></span><br><span class="line">           proxy_set_header Host $host;</span><br><span class="line">           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">     <span class="keyword">location</span> <span class="title">~* ^/assets</span>/ &#123;</span><br><span class="line">                <span class="comment"># Per RFC2616 - 1 year maximum expiry</span></span><br><span class="line">                expires <span class="number">1</span>y;</span><br><span class="line">                add_header Cache-Control public;</span><br><span class="line">                add_header Last-Modified <span class="string">&quot;&quot;</span>;</span><br><span class="line">                add_header ETag <span class="string">&quot;&quot;</span>;</span><br><span class="line">                break;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-
-配置puma,注意补全缺失文件夹
-
-123456789
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/nginx+puma/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1611,7 +1630,7 @@ git rem
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1699,20 +1718,23 @@ git rem
       
         
           
-          关于个人写小爬虫的积累所用gem
-gem ‘nokogiri’
-gem “http”  
+            <h2 id="关于个人写小爬虫的积累"><a href="#关于个人写小爬虫的积累" class="headerlink" title="关于个人写小爬虫的积累"></a>关于个人写小爬虫的积累</h2><h3 id="所用gem"><a href="#所用gem" class="headerlink" title="所用gem"></a>所用gem</h3><ul>
+<li>gem ‘nokogiri’</li>
+<li>gem “http”  </li>
+</ul>
+<hr>
+<h4 id="关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码"><a href="#关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码" class="headerlink" title="关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码"></a>关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取所需的http页面tbody</span></span><br><span class="line">   body = HTTP.get(name).body</span><br><span class="line">     ans = []</span><br><span class="line">    <span class="keyword">while</span> body != <span class="string">&#x27;&#x27;</span> </span><br><span class="line">    <span class="comment">#遍历获取所有body页面</span></span><br><span class="line">     html = body.readpartial</span><br><span class="line">      <span class="keyword">if</span> html ==<span class="literal">nil</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      <span class="comment">#获取页面中的html然后讲所需要的img抽取出来，存入数组当中</span></span><br><span class="line">     doc = Nokogiri::HTML(html)</span><br><span class="line">     doc.search(<span class="string">&#x27;img&#x27;</span>).each <span class="keyword">do</span> <span class="params">|i|</span></span><br><span class="line">       ans &lt;&lt; i.attr(<span class="string">&#x27;src&#x27;</span>) <span class="keyword">if</span> i.attr(<span class="string">&#x27;src&#x27;</span>) != <span class="literal">nil</span></span><br><span class="line">     <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">#获取的所有html链接通过wget下载</span></span><br><span class="line">    ans.each <span class="keyword">do</span> <span class="params">|full_url|</span></span><br><span class="line">    <span class="comment">#system &quot;mkdir #&#123;Dir.getwd&#125;/photo &quot;</span></span><br><span class="line">    cmd = system <span class="string">&quot;wget -r <span class="subst">#&#123;Dir.getwd&#125;</span>/ <span class="subst">#&#123;full_url&#125;</span>&quot;</span></span><br><span class="line">    puts <span class="string">&#x27;-&#x27;</span> * <span class="number">20</span></span><br><span class="line">    p cmd</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">puts <span class="string">&#x27;success&#x27;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="项目地址为"><a href="#项目地址为" class="headerlink" title="项目地址为"></a>项目地址为</h4><ul>
+<li><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/wangliyao/clone_photo">https://github.com/wangliyao/clone_photo</a></p>
+</blockquote>
+</li>
+</ul>
 
-关于爬虫最简单的写法其实并没有想象中的难以理解，具体操作就是获取所需要的网页，解析html，获取你想要的元素，并保存，大部分问题gem包都已经为我们解决了，下面是一个简单的爬虫的代码123456789101
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/photo_clone/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1785,10 +1807,6 @@ gem “http”
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/Aaron.jpg"
-                alt="" />
-            
               <p class="site-author-name" itemprop="name"></p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -1832,22 +1850,6 @@ gem “http”
 
           
 
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/wangliyao" target="_blank" title="wangliyao">
-                      
-                        <i class="fa fa-fw fa-globe"></i>wangliyao</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="liyaowangi@gmail.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
           
 
           
@@ -1893,7 +1895,7 @@ gem “http”
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 

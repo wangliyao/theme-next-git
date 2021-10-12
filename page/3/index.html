@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -95,7 +95,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '',
-    scheme: 'Mist',
+    scheme: 'Muse',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -189,36 +189,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/%20" rel="section">
             
@@ -266,7 +236,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -354,17 +324,13 @@
       
         
           
-          使用postgre导出csv文件
-使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; 
-COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV,
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/postgre%E5%AF%BC%E5%87%BAcsv%E6%96%87%E4%BB%B6/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="使用postgre导出csv文件"><a href="#使用postgre导出csv文件" class="headerlink" title="使用postgre导出csv文件"></a>使用postgre导出csv文件</h2><ul>
+<li>使用命令 COPY table_name TO ‘/Users/user/table_name.csv’ WITH csv; </li>
+<li>COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV, NULL ‘’, ENCODING ‘UTF8’);</li>
+<li>mac excel 打开乱码问题 iconv -f UTF8 -t GB18030 a.csv &gt;b.csv</li>
+</ul>
+
+          
         
       
     </div>
@@ -416,7 +382,7 @@ COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV,
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -504,17 +470,23 @@ COPY ads TO ‘/Users/user/table_name.csv’(DELIMITER E’\t’, FORMAT CSV,
       
         
           
-          ##Rails N+1查询及解决方式
-Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况
-123456789101112131415161718class Post &lt; ApplicationRecord  has_many :commentsendclass Comm
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/rails%20N+1%20%E9%97%AE%E9%A2%98/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>##Rails N+1查询及解决方式</p>
+<p>Rails在module层建立关联后，进行关联查询时会出现N+1查询的情况</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Post</span> &lt; ApplicationRecord</span></span><br><span class="line">  has_many <span class="symbol">:comments</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Comment</span> &lt; ApplicationRecord</span></span><br><span class="line">  belongs_to <span class="symbol">:post</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">&gt; Post.count</span><br><span class="line">(<span class="number">0</span>.1ms)  SELECT COUNT(*) FROM <span class="string">&quot;posts&quot;</span></span><br><span class="line">=&gt; <span class="number">4</span></span><br><span class="line"></span><br><span class="line">&gt; Post.all.map&#123;<span class="params">|post|</span> post.comments&#125;</span><br><span class="line">  Post Load (<span class="number">0</span>.3ms)  SELECT <span class="string">&quot;posts&quot;</span>.* FROM <span class="string">&quot;posts&quot;</span></span><br><span class="line">  Comment Load (<span class="number">0</span>.2ms)  SELECT <span class="string">&quot;comments&quot;</span>.* FROM <span class="string">&quot;comments&quot;</span> WHERE <span class="string">&quot;comments&quot;</span>.<span class="string">&quot;post_id&quot;</span> = ?  [[<span class="string">&quot;post_id&quot;</span>, <span class="number">1</span>]]</span><br><span class="line">  Comment Load (<span class="number">0</span>.4ms)  SELECT <span class="string">&quot;comments&quot;</span>.* FROM <span class="string">&quot;comments&quot;</span> WHERE <span class="string">&quot;comments&quot;</span>.<span class="string">&quot;post_id&quot;</span> = ?  [[<span class="string">&quot;post_id&quot;</span>, <span class="number">2</span>]]</span><br><span class="line">  Comment Load (<span class="number">0</span>.6ms)  SELECT <span class="string">&quot;comments&quot;</span>.* FROM <span class="string">&quot;comments&quot;</span> WHERE <span class="string">&quot;comments&quot;</span>.<span class="string">&quot;post_id&quot;</span> = ?  [[<span class="string">&quot;post_id&quot;</span>, <span class="number">3</span>]]</span><br><span class="line">  Comment Load (<span class="number">0</span>.6ms)  SELECT <span class="string">&quot;comments&quot;</span>.* FROM <span class="string">&quot;comments&quot;</span> WHERE <span class="string">&quot;comments&quot;</span>.<span class="string">&quot;post_id&quot;</span> = ?  [[<span class="string">&quot;post_id&quot;</span>, <span class="number">4</span>]]</span><br></pre></td></tr></table></figure>
+<p><code>一共有4个查询结果，但是却查询了5次，这个就出现了N+1查询</code></p>
+<p>##解决方式</p>
+<p>ActiveRecord提供了对module层预加载的功能</p>
+<p>分别为</p>
+<ul>
+<li><code>includes</code></li>
+<li><code>preload</code></li>
+<li><code>eager_load</code></li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Post.includes(<span class="symbol">:comments</span>).map&#123;<span class="params">|post|</span> post.comments&#125;</span><br><span class="line">  Post Load (<span class="number">0</span>.2ms)  SELECT <span class="string">&quot;posts&quot;</span>.* FROM <span class="string">&quot;posts&quot;</span></span><br><span class="line">  Comment Load (<span class="number">0</span>.5ms)  SELECT <span class="string">&quot;comments&quot;</span>.* FROM <span class="string">&quot;comments&quot;</span> WHERE <span class="string">&quot;comments&quot;</span>.<span class="string">&quot;post_id&quot;</span> IN (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p><code>更优雅的方式参见gem goldiloader</code></p>
+<p>####关于rails N+1问题<br> 在rails处理关联关系的时候出现，如果使用普通的查询，会先去执行查找父的条件，然后在去逐一查询子表的关联数据，如果使用include查询，则会只进行两次的条件查询<br> 减少与数据库的交互，一定程度上增加程序的查询效率，是比较常见的开发中会出现的问题</p>
+
+          
         
       
     </div>
@@ -566,7 +538,7 @@ Rails在module层建立关联后，进行关联查询时会出现N+1查询的情
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -654,19 +626,19 @@ Rails在module层建立关联后，进行关联查询时会出现N+1查询的情
       
         
           
-          shaodowsock配置很多，网上都能搜到，主要是kcptun加速shadowsocks
-vps安装kcptun一键安装脚本一键安装脚本教程
-因为mac上的kcptun问题很多，所以建议用命令行启动
-mac安装kcptungithub地址
-下载下来之后，启动 client_darwin_amd64
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/shadowsock+kcptun/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h3 id="shaodowsock配置很多，网上都能搜到，主要是kcptun加速shadowsocks"><a href="#shaodowsock配置很多，网上都能搜到，主要是kcptun加速shadowsocks" class="headerlink" title="shaodowsock配置很多，网上都能搜到，主要是kcptun加速shadowsocks"></a>shaodowsock配置很多，网上都能搜到，主要是kcptun加速shadowsocks</h3><ul>
+<li>vps安装kcptun一键安装脚本<a target="_blank" rel="noopener" href="https://blog.kuoruan.com/110.html">一键安装脚本教程</a></li>
+<li>因为mac上的kcptun问题很多，所以建议用命令行启动</li>
+<li>mac安装kcptun<a target="_blank" rel="noopener" href="https://github.com/xtaci/kcptun">github地址</a></li>
+<li>下载下来之后，启动 client_darwin_amd64 这个包</li>
+<li>客户端./client_darwin_amd64 -r “123.321.123.123:4001” -l “:1070” -mode fast2启动命令，这里说明一下”:1070”这个端口是本地端口。可以随意设置<br>最好还是写成一个.json文件进行启动，具体的文件内容如下<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 在客户端保存为client.json</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;localaddr&quot;</span>: <span class="string">&quot;:1070&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;remoteaddr&quot;</span>: <span class="string">&quot;123.321.123.123:4001&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;tester&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;crypt&quot;</span>: <span class="string">&quot;aes-192&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;mode&quot;</span>: <span class="string">&quot;fast2&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+脚本里的信息在第一条一键安装教程当中有提示到</li>
+<li>到现在可以启动了，mac 本地shadowsocks 需要改成127.0.0.0，端口为你本地启动设置的端口比如1070</li>
+<li>mac下将其设置为开机自启动，本地写一个.sh的脚本，然后系统偏好&gt;用户与群组&gt;登录项添加脚本，最好写成绝对路径，然后给脚本还有 client_darwin_amd64这个<br>包加chmod +x 文件名添加可执行权限</li>
+<li>然后重启电脑，脚本就会自动后台运行了</li>
+</ul>
+
+          
         
       
     </div>
@@ -718,7 +690,7 @@ mac安装kcptungithub地址
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -806,16 +778,33 @@ mac安装kcptungithub地址
       
         
           
-          微信公众号开发流程1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下：
-1）将toke
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/wechat%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="微信公众号开发流程"><a href="#微信公众号开发流程" class="headerlink" title="微信公众号开发流程"></a>微信公众号开发流程</h2><h3 id="1-接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功"><a href="#1-接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功" class="headerlink" title="1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功"></a>1.接入微信，与微信服务器确认是微信开发者进行的请求，成为开发者成功</h3><p>开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下：</p>
+<p>1）将token、timestamp、nonce三个参数进行字典序排序</p>
+<p>2）将三个参数字符串拼接成一个字符串进行sha1加密</p>
+<p>3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
+<h2 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h2><pre><code>def auth_wechat
+    if check_signature?(params[:signature], params[:timestamp], params[:nonce])
+      return render text: params[:echostr]
+    end
+  end
+  
+  def check_signature?(signature, timestamp, nonce)
+    Digest::SHA1.hexdigest([timestamp, nonce, @@token].sort.join) == signature
+  end
+</code></pre>
+<hr>
+<h3 id="2-获取access-token"><a href="#2-获取access-token" class="headerlink" title="2.获取access_token"></a>2.获取access_token</h3><p>https请求方式: GET</p>
+<p><a target="_blank" rel="noopener" href="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET">https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET</a></p>
+<p>返回值：{“access_token”:”ACCESS_TOKEN”,”expires_in”:7200}</p>
+<p>参数说明：</p>
+<p>access_token : 凭证</p>
+<p>expires_in : 凭证有效时间</p>
+<h3 id="3-此处只涉及连接问题"><a href="#3-此处只涉及连接问题" class="headerlink" title="3.此处只涉及连接问题"></a>3.此处只涉及连接问题</h3><p> 其他问题可参考微信开发手册</p>
+<h4 id="微信开发gem"><a href="#微信开发gem" class="headerlink" title="微信开发gem"></a>微信开发gem</h4><p><a target="_blank" rel="noopener" href="https://github.com/jasl/wx_pay">微信支付gem:wx_pay</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/lanrion/weixin_rails_middleware">微信开发常用gem:weixin_rails_middleware</a>:这个gem运行命令可直接生成相应的基础功能（包括连接微信接口）</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/lanrion/weixin_authorize">微信高级功能api实现gem:weixin_authorize</a></p>
+
+          
         
       
     </div>
@@ -867,7 +856,7 @@ mac安装kcptungithub地址
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -955,20 +944,45 @@ mac安装kcptungithub地址
       
         
           
-          一些工具开发前需要准备的东西一个rubyb程序员，当然是需要翻墙的，翻墙vps 推荐
-vutrl 以前用过还是很便宜的，以前用的5美元一个月，听说现在有2.5美元一个月的了
-host1plus 网速很快，也很便宜 ，2.5美元一个月
-翻墙工具 shadowsocks ,自己搭建，自己造梯子
+            <h1 id="一些工具"><a href="#一些工具" class="headerlink" title="一些工具"></a>一些工具</h1><h2 id="开发前需要准备的东西"><a href="#开发前需要准备的东西" class="headerlink" title="开发前需要准备的东西"></a>开发前需要准备的东西</h2><h4 id="一个rubyb程序员，当然是需要翻墙的，翻墙vps-推荐"><a href="#一个rubyb程序员，当然是需要翻墙的，翻墙vps-推荐" class="headerlink" title="一个rubyb程序员，当然是需要翻墙的，翻墙vps 推荐"></a>一个rubyb程序员，当然是需要翻墙的，翻墙vps 推荐</h4><ul>
+<li>vutrl 以前用过还是很便宜的，以前用的5美元一个月，听说现在有2.5美元一个月的了</li>
+<li>host1plus 网速很快，也很便宜 ，2.5美元一个月</li>
+<li>翻墙工具 shadowsocks ,自己搭建，自己造梯子</li>
+</ul>
+<h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><h4 id="本人目前使用过的开发工具暂时有"><a href="#本人目前使用过的开发工具暂时有" class="headerlink" title="本人目前使用过的开发工具暂时有"></a>本人目前使用过的开发工具暂时有</h4><ul>
+<li>rubymine(算是一个很棒的开发工具了，不过大神们都是文本编辑器)</li>
+<li>atom(文本编辑器，也可以做开发，可以自定义好多插件，非常的炫酷)</li>
+</ul>
+<hr>
+<h2 id="开发中使用的一些gem"><a href="#开发中使用的一些gem" class="headerlink" title="开发中使用的一些gem"></a>开发中使用的一些gem</h2><h4 id="开发时启用develop模式加速系统运行"><a href="#开发时启用develop模式加速系统运行" class="headerlink" title="开发时启用develop模式加速系统运行"></a>开发时启用develop模式加速系统运行</h4><ul>
+<li>  gem ‘rails-dev-boost’ </li>
+<li>  gem ‘rb-inotify’</li>
+</ul>
+<hr>
+<h4 id="断点调试，非常强大的垮作用域调试工具"><a href="#断点调试，非常强大的垮作用域调试工具" class="headerlink" title="断点调试，非常强大的垮作用域调试工具"></a>断点调试，非常强大的垮作用域调试工具</h4><ul>
+<li>gem ‘pry’</li>
+</ul>
+<hr>
+<h4 id="作为快速生成用户名，邮箱等内容，快速构建出一个简单的用户登录，注册等信息，还是非常好用的，只不过生成的界面有些简陋，需要自己去调或者引用前端"><a href="#作为快速生成用户名，邮箱等内容，快速构建出一个简单的用户登录，注册等信息，还是非常好用的，只不过生成的界面有些简陋，需要自己去调或者引用前端" class="headerlink" title="作为快速生成用户名，邮箱等内容，快速构建出一个简单的用户登录，注册等信息，还是非常好用的，只不过生成的界面有些简陋，需要自己去调或者引用前端"></a>作为快速生成用户名，邮箱等内容，快速构建出一个简单的用户登录，注册等信息，还是非常好用的，只不过生成的界面有些简陋，需要自己去调或者引用前端</h4><ul>
+<li>gem ‘Devise’</li>
+</ul>
+<hr>
+<h4 id="分页操作，分页工具，per-10-page-params-page-，在controller中就直接查询出所需要的页面数据以每页十条的方式分类，然后在需要输出数据的地方paginate，分页就实现了"><a href="#分页操作，分页工具，per-10-page-params-page-，在controller中就直接查询出所需要的页面数据以每页十条的方式分类，然后在需要输出数据的地方paginate，分页就实现了" class="headerlink" title="分页操作，分页工具，per(10).page(params[:page])，在controller中就直接查询出所需要的页面数据以每页十条的方式分类，然后在需要输出数据的地方paginate，分页就实现了"></a>分页操作，分页工具，per(10).page(params[:page])，在controller中就直接查询出所需要的页面数据以每页十条的方式分类，然后在需要输出数据的地方paginate，分页就实现了</h4><ul>
+<li>gem ‘Kaminari’ </li>
+</ul>
+<hr>
+<h4 id="表单-跟form-for一样，很简单，不会在一些方面可以自己简化一些东西，比如地址，什么的，就可以使用自己带的"><a href="#表单-跟form-for一样，很简单，不会在一些方面可以自己简化一些东西，比如地址，什么的，就可以使用自己带的" class="headerlink" title="表单,跟form_for一样，很简单，不会在一些方面可以自己简化一些东西，比如地址，什么的，就可以使用自己带的"></a>表单,跟form_for一样，很简单，不会在一些方面可以自己简化一些东西，比如地址，什么的，就可以使用自己带的</h4><ul>
+<li>gem ‘simple_form’</li>
+</ul>
+<hr>
+<h4 id="上传附件的gem-应该算是很常用的gem，上传附件，两个都很强大，可以指定上传位置，上传文件类型，以及上传大小"><a href="#上传附件的gem-应该算是很常用的gem，上传附件，两个都很强大，可以指定上传位置，上传文件类型，以及上传大小" class="headerlink" title="上传附件的gem,应该算是很常用的gem，上传附件，两个都很强大，可以指定上传位置，上传文件类型，以及上传大小"></a>上传附件的gem,应该算是很常用的gem，上传附件，两个都很强大，可以指定上传位置，上传文件类型，以及上传大小</h4><ul>
+<li>gem ‘ Carrierwave 和 Paperclip’</li>
+</ul>
+<h4 id="短信开发接口gem，文档很清晰"><a href="#短信开发接口gem，文档很清晰" class="headerlink" title="短信开发接口gem，文档很清晰"></a>短信开发接口gem，文档很清晰</h4><ul>
+<li>gem  ‘china_sms’</li>
+</ul>
 
-开发工
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E5%92%8C%E5%BC%80%E5%8F%91gem/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1020,7 +1034,7 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1108,15 +1122,13 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
       
         
           
-          冒泡12345678a = (1..10).to_a.shufflea.each_index do |index|  (a.size - 1 - index).times do |e|    if a[e] &lt; a[e+1]       a[e], a[e+1] = a[e+1], a[e] 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h3 id="冒泡"><a href="#冒泡" class="headerlink" title="冒泡"></a>冒泡</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = (<span class="number">1</span>..<span class="number">10</span>).to_a.shuffle</span><br><span class="line">a.each_index <span class="keyword">do</span> <span class="params">|index|</span></span><br><span class="line">  (a.size - <span class="number">1</span> - index).times <span class="keyword">do</span> <span class="params">|e|</span></span><br><span class="line">    <span class="keyword">if</span> a[e] &lt; a[e+<span class="number">1</span>]</span><br><span class="line">       a[e], a[e+<span class="number">1</span>] = a[e+<span class="number">1</span>], a[e]</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def sort arr</span><br><span class="line">  (pivot = arr.pop) ? sort(arr.select&#123; <span class="params">|i|</span> i &lt;= pivot &#125;) + [pivot] + sort(arr.select&#123; <span class="params">|j|</span> j &gt; pivot &#125;) : []</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">x = (<span class="number">1</span>..<span class="number">10</span>).to_a.shuffle</span><br><span class="line">p sort x</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先进先出</span></span><br><span class="line">list = [<span class="number">6</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">4</span>]</span><br><span class="line">tail = list.length</span><br><span class="line">head = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> head &lt; tail</span><br><span class="line">  puts list[head]</span><br><span class="line">  head += <span class="number">1</span></span><br><span class="line">  list[tail] = list[head]</span><br><span class="line">  tail += <span class="number">1</span></span><br><span class="line">  head += <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+          
         
       
     </div>
@@ -1168,7 +1180,7 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1256,17 +1268,21 @@ host1plus 网速很快，也很便宜 ，2.5美元一个月
       
         
           
-          page_cache 页面缓存
-rails本身所自带的页面cache缓存,从数据库取出数据之后然后在页面中展示，将页面缓存成为一个静态的页面
-套娃机制，所用到的1234&lt;% cache @top %&gt;  &lt;% cache @bander %&gt;  &lt;% end %&gt;
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/%E7%BC%93%E5%AD%98/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="page-cache-页面缓存"><a href="#page-cache-页面缓存" class="headerlink" title="page_cache 页面缓存"></a>page_cache 页面缓存</h2><ul>
+<li>rails本身所自带的页面cache缓存,从数据库取出数据之后然后在页面中展示，将页面缓存成为一个静态的页面</li>
+<li>套娃机制，所用到的<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% cache <span class="variable">@top</span> %&gt;</span><br><span class="line">  &lt;% cache <span class="variable">@bander</span> %&gt;</span><br><span class="line">  &lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="cache-model缓存"><a href="#cache-model缓存" class="headerlink" title="cache model缓存"></a>cache model缓存</h2></li>
+<li>rails本身自带的model缓存，从model<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Rails.cache.fetch(<span class="string">&quot;<span class="subst">#&#123;cache_key&#125;</span>/competing_price&quot;</span>, <span class="symbol">expires_in:</span> <span class="number">12</span>.hours) <span class="keyword">do</span></span><br><span class="line">  Competitor::API.find_price(id)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="所用gem-second-level-cache"><a href="#所用gem-second-level-cache" class="headerlink" title="所用gem second_level_cache"></a>所用gem second_level_cache</h2></li>
+<li>是一个非常简单而且有用的缓存gem<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    second_level_cache(<span class="symbol">version:</span> <span class="number">1</span>, <span class="symbol">expires_in:</span> <span class="number">1</span>.week) <span class="comment">#model中添加需要缓存的model</span></span><br></pre></td></tr></table></figure></li>
+<li>就可以直接缓存了，但是注意只能进行find的缓存，不支持多条缓存。</li>
+<li>通过callback方法来进行数据库的同步操作</li>
+<li>cache_money 类似，只需要在 model 里做一次声明，不影响正常的 ActiveRecord 查询接口。可以方便的添加/移除缓存插件无须修改任何代码。</li>
+<li>方便的缓存清理机制。提供清理各个粒度缓存内容的接口（包括清理所有 second_level_cache 的缓存、清理单个model的所有记录的缓存、清理单条记录的缓存）</li>
+</ul>
+<h2 id="ruby-缓存的一些使用"><a href="#ruby-缓存的一些使用" class="headerlink" title="ruby 缓存的一些使用"></a>ruby 缓存的一些使用</h2><p>   经常使用的Rails.cache<br>   <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">Rails.cache.fetch([<span class="string">&#x27;**&#x27;</span>, **, CacheVersion.***]) <span class="keyword">do</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">### cache_version.rb</span></span><br><span class="line"><span class="comment"># frozen_string_literal: true</span></span><br><span class="line"><span class="comment"># 用于记录特定的 cache version</span></span><br><span class="line"><span class="comment"># 比如:</span></span><br><span class="line"><span class="comment">#    记录最后更新 置顶话题的时间,以用于作为自动变换置顶那个 cache 的 key，以达到自动过期的目的</span></span><br><span class="line"><span class="comment"># 用法例子:</span></span><br><span class="line"><span class="comment">#   以上面个场景为例</span></span><br><span class="line"><span class="comment">#   Topic after_suggest -&gt;</span></span><br><span class="line"><span class="comment">#   CacheVersion.topic_last_suggested_at = Time.now</span></span><br><span class="line"><span class="comment">#  View 里面 &lt;% cache(&quot;topic/index/sidebar_suggest:#&#123;CacheVersion.topic_last_suggested_at&#125;&quot;) do %&gt;&lt;% end %&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CacheVersion</span></span></span><br><span class="line">  def <span class="keyword">self</span>.method_missing(method, *args)</span><br><span class="line">    method_name = method.to_s</span><br><span class="line">    <span class="keyword">super</span>(method, *args)</span><br><span class="line">  <span class="keyword">rescue</span> NoMethodError</span><br><span class="line">    <span class="keyword">if</span> method_name =~ <span class="regexp">/=$/</span></span><br><span class="line">      var_name = method_name.sub(<span class="string">&quot;=&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br><span class="line">      key      = CacheVersion.mk_key(var_name)</span><br><span class="line">      value    = args.first.to_s</span><br><span class="line">      <span class="comment"># save</span></span><br><span class="line">      Rails.cache.write(key, value)</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      key = CacheVersion.mk_key(method)</span><br><span class="line">      Rails.cache.read(key)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  def <span class="keyword">self</span>.mk_key(key)</span><br><span class="line">    <span class="string">&quot;cache_version:<span class="subst">#&#123;key&#125;</span>&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### model.rb</span></span><br><span class="line"></span><br><span class="line">after_commit <span class="symbol">:update_cache_version</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_cache_version</span></span></span><br><span class="line">  CacheVersion.homepage_recomendation_updated_at = Time.now</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+
+          
         
       
     </div>
@@ -1318,7 +1334,7 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1406,15 +1422,14 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
       
         
           
-          在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i 1`pg_dump -i -s -x -O -f #&#123;Shellwords.escape(filename)&#125; #&#123;search_path&#
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/%E8%A7%A3%E5%86%B3rails%204.2.2%20rake%E9%94%99%E8%AF%AF/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h3 id="在rails-4-2-2中-执行rake-db-migrate-遇到报错pg-dump-invalid-option-–-i"><a href="#在rails-4-2-2中-执行rake-db-migrate-遇到报错pg-dump-invalid-option-–-i" class="headerlink" title="在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i"></a>在rails 4.2.2中,执行rake db:migrate 遇到报错pg_dump: invalid option – i</h3> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`pg_dump -i -s -x -O -f <span class="subst">#&#123;Shellwords.escape(filename)&#125;</span> <span class="subst">#&#123;search_path&#125;</span> <span class="subst">#&#123;Shellwords.escape(config[<span class="string">&#x27;database&#x27;</span>])&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>rails 4.2.2中连接pg数据库 遇到pg_dump: invalid option – i，google一下说是因为这一句的原因 db:structure:dump task</li>
+<li>解决方案为，在initializers重新配置一个不同的ActiveRecord方法，合并起来创建一个新的db:structure:dump task ,当运行rake db的时候执行所创建的新任务<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> Rake::Task[<span class="string">&quot;db:structure:dump&quot;</span>].clear</span><br><span class="line">namespace <span class="symbol">:db</span> <span class="keyword">do</span></span><br><span class="line">  namespace <span class="symbol">:structure</span> <span class="keyword">do</span></span><br><span class="line">    desc <span class="string">&quot;Overriding the task db:structure:dump task to remove -i option from pg_dump to make postgres 9.5 compatible&quot;</span></span><br><span class="line">    task <span class="symbol">dump:</span> [<span class="symbol">:environment</span>, <span class="symbol">:load_config</span>] <span class="keyword">do</span></span><br><span class="line">      config = ActiveRecord::Base.configurations[Rails.env]</span><br><span class="line">      set_psql_env(config)</span><br><span class="line">      filename =  File.join(Rails.root, <span class="string">&quot;db&quot;</span>, <span class="string">&quot;structure.sql&quot;</span>)</span><br><span class="line">      database = config[<span class="string">&quot;database&quot;</span>]</span><br><span class="line">      command = <span class="string">&quot;pg_dump -s -x -O -f <span class="subst">#&#123;Shellwords.escape(filename)&#125;</span> <span class="subst">#&#123;Shellwords.escape(database)&#125;</span>&quot;</span></span><br><span class="line">      raise <span class="string">&#x27;Error dumping database&#x27;</span> <span class="keyword">unless</span> Kernel.system(command)</span><br><span class="line"></span><br><span class="line">      File.open(filename, <span class="string">&quot;a&quot;</span>) &#123; <span class="params">|f|</span> f &lt;&lt; <span class="string">&quot;SET search_path TO <span class="subst">#&#123;ActiveRecord::Base.connection.schema_search_path&#125;</span>;\n\n&quot;</span> &#125;</span><br><span class="line">      <span class="keyword">if</span> ActiveRecord::Base.connection.supports_migrations?</span><br><span class="line">        File.open(filename, <span class="string">&quot;a&quot;</span>) <span class="keyword">do</span> <span class="params">|f|</span></span><br><span class="line">          f.puts ActiveRecord::Base.connection.dump_schema_information</span><br><span class="line">          f.print <span class="string">&quot;\n&quot;</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      Rake::Task[<span class="string">&quot;db:structure:dump&quot;</span>].reenable</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">set_psql_env</span><span class="params">(configuration)</span></span></span><br><span class="line">    ENV[<span class="string">&#x27;PGHOST&#x27;</span>]     = configuration[<span class="string">&#x27;host&#x27;</span>]          <span class="keyword">if</span> configuration[<span class="string">&#x27;host&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGPORT&#x27;</span>]     = configuration[<span class="string">&#x27;port&#x27;</span>].to_s     <span class="keyword">if</span> configuration[<span class="string">&#x27;port&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGPASSWORD&#x27;</span>] = configuration[<span class="string">&#x27;password&#x27;</span>].to_s <span class="keyword">if</span> configuration[<span class="string">&#x27;password&#x27;</span>]</span><br><span class="line">    ENV[<span class="string">&#x27;PGUSER&#x27;</span>]     = configuration[<span class="string">&#x27;username&#x27;</span>].to_s <span class="keyword">if</span> configuration[<span class="string">&#x27;username&#x27;</span>]</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>  具体回答<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/35999906/pg-dump-invalid-option-i-when-migrating">pg_dump: invalid option — i” when migrating</a></p>
+
+          
         
       
     </div>
@@ -1466,7 +1481,7 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Aaron.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1554,15 +1569,11 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
       
         
           
-          使用gem  exception_notification 报错监控 1234567891011121314config.action_mailer.smtp_settings = &#123;     :address              =&gt; &quot;smtp.163.com&q
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/04/%E9%94%99%E8%AF%AF%E7%9B%91%E6%8E%A7/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="使用gem-exception-notification-报错监控"><a href="#使用gem-exception-notification-报错监控" class="headerlink" title="使用gem  exception_notification 报错监控"></a>使用gem  exception_notification 报错监控</h2> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">config.action_mailer.smtp_settings = &#123;</span><br><span class="line">     <span class="symbol">:address</span>              =&gt; <span class="string">&quot;smtp.163.com&quot;</span>,</span><br><span class="line">     <span class="symbol">:port</span>                 =&gt; <span class="number">25</span>,</span><br><span class="line">     <span class="symbol">:domain</span>               =&gt; <span class="string">&quot;163.com&quot;</span>,</span><br><span class="line">     <span class="symbol">:user_name</span>            =&gt; <span class="string">&quot;username&quot;</span>,</span><br><span class="line">     <span class="symbol">:password</span>             =&gt; <span class="string">&quot;password&quot;</span>,<span class="comment">#此处密码是授权密码 </span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> config.middleware.use ExceptionNotification::Rack,</span><br><span class="line">                       <span class="symbol">:email</span> =&gt; &#123;</span><br><span class="line">                           <span class="symbol">:sender_address</span> =&gt; <span class="string">%&#123;username&#125;</span>,</span><br><span class="line">                           <span class="symbol">:exception_recipients</span> =&gt; <span class="string">%w&#123;&#x27;xxx@xxxmail.com&#x27;&#125;</span></span><br><span class="line">                       &#125;</span><br><span class="line">                       </span><br></pre></td></tr></table></figure>
+<h2 id="163邮箱设置"><a href="#163邮箱设置" class="headerlink" title="163邮箱设置"></a>163邮箱设置</h2><p><img src="http://img.blog.csdn.net/20160504000538104"><br><img src="http://img.blog.csdn.net/20160504000607886"><br><img src="http://img.blog.csdn.net/20160504000607886"></p>
+<h1 id="qq企业邮箱设置"><a href="#qq企业邮箱设置" class="headerlink" title="qq企业邮箱设置"></a>qq企业邮箱设置</h1> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">config.action_mailer.delivery_method = <span class="symbol">:smtp</span></span><br><span class="line"></span><br><span class="line">config.action_mailer.smtp_settings = &#123;</span><br><span class="line">    <span class="symbol">address:</span> <span class="string">&quot;smtp.exmail.qq.com&quot;</span>,</span><br><span class="line">    <span class="symbol">port:</span> <span class="number">465</span>,</span><br><span class="line">    <span class="symbol">domain:</span> <span class="string">&quot;exmail.qq.com&quot;</span>,</span><br><span class="line">      <span class="symbol">user_name:</span> <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="symbol">password:</span> <span class="string">&#x27;xxxx&#x27;</span>,</span><br><span class="line">    <span class="symbol">:authentication</span>       =&gt; <span class="symbol">:login</span>,</span><br><span class="line">    <span class="symbol">:ssl</span> =&gt; <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line">                        </span><br></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -1635,10 +1646,6 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/Aaron.jpg"
-                alt="" />
-            
               <p class="site-author-name" itemprop="name"></p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -1682,22 +1689,6 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
 
           
 
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/wangliyao" target="_blank" title="wangliyao">
-                      
-                        <i class="fa fa-fw fa-globe"></i>wangliyao</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="liyaowangi@gmail.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
           
 
           
@@ -1743,7 +1734,7 @@ rails本身所自带的页面cache缓存,从数据库取出数据之后然后在
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
